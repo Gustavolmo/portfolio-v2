@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@gustavolmo/react-window-manager':
+        specifier: ^0.1.401
+        version: 0.1.401(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       lucide-react:
         specifier: ^0.575.0
         version: 0.575.0(react@19.0.0)
@@ -336,6 +339,12 @@ packages:
   '@eslint/plugin-kit@0.2.6':
     resolution: {integrity: sha512-+0TjwR1eAUdZtvv/ir1mGX+v0tUoR3VEPB8Up0LLJC+whRW0GgBBtpbOkg/a/U4Dxa6l5a3l9AJ1aWIQVyoWJA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@gustavolmo/react-window-manager@0.1.401':
+    resolution: {integrity: sha512-Co/O8imxYSKYoRNmWPIml9hntCc4CtdGbkl9TQqxguAqYRF9e/sofHzabimNM1Y74dtNxIWlVhuDm4hI3vAFzw==}
+    peerDependencies:
+      react: ^19.0.0
+      react-dom: ^19.0.0
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1613,6 +1622,16 @@ snapshots:
     dependencies:
       '@eslint/core': 0.11.0
       levn: 0.4.1
+
+  '@gustavolmo/react-window-manager@0.1.401(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+      zustand: 5.0.3(@types/react@19.0.10)(react@19.0.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - immer
+      - use-sync-external-store
 
   '@humanfs/core@0.19.1': {}
 
