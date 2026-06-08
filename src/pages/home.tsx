@@ -1,15 +1,15 @@
 import { CodeXml, Cpu, Github, Globe, Linkedin, Terminal } from 'lucide-react'
 import profilePic from '../assets/profile-pic-circlewhite.png'
-import { createWindowStore, WindowButton, WindowLayout, WorkspaceLayout } from '@gustavolmo/react-window-manager'
+import { createWindowStore, WorkspaceLayout } from '@gustavolmo/react-window-manager'
 
-const bottomOffsetPx = 48
-const myStackStore = createWindowStore('window-myStack', bottomOffsetPx)
-const allverkStore = createWindowStore('window-allverk', bottomOffsetPx)
-const offertAllverkStore = createWindowStore('window-offert-allverk', bottomOffsetPx)
+const myStackStore = createWindowStore()
+const allverkStore = createWindowStore()
+const offertAllverkStore = createWindowStore()
 
 export default function Home() {
-  const { isResizing: isResizingOffert, isDragging: isDraggingOffert } = offertAllverkStore()
-  const { isResizing: isResizingAllverk, isDragging: isDraggingAllverk } = allverkStore()
+  const { resizeAction: isResizingOffert, isDragging: isDraggingOffert } =
+    offertAllverkStore.store()
+  const { resizeAction: isResizingAllverk, isDragging: isDraggingAllverk } = allverkStore.store()
   return (
     <>
       <WorkspaceLayout>
@@ -29,23 +29,17 @@ export default function Home() {
               Case Studies
             </p>
             <div className="font-sans w-full text-white opacity-80 font-thin max-w-xl flex flex-col gap-2 mb-4">
-              <WindowButton
-                useWindowStore={allverkStore}
-                styles="border border-neutral-600 bg-neutral-600 bg-opacity-50 hover:bg-opacity-80 px-4 py-1 w-fit"
-              >
+              <myStackStore.Button className="border border-neutral-600 bg-neutral-600 bg-opacity-50 hover:bg-opacity-80 px-4 py-1 w-fit">
                 allverk.se
-              </WindowButton>{' '}
+              </myStackStore.Button>{' '}
               <p className="text-sm opacity-80">
                 Embeddings and AI powered vector search engine (React, Go and PgSQL)
               </p>
             </div>
             <div className="font-sans w-full text-white opacity-80 font-thin max-w-xl flex flex-col gap-2">
-              <WindowButton
-                useWindowStore={offertAllverkStore}
-                styles="border border-neutral-600 bg-neutral-600 bg-opacity-50 hover:bg-opacity-80 px-4 py-1 w-fit"
-              >
+              <offertAllverkStore.Button className="border border-neutral-600 bg-neutral-600 bg-opacity-50 hover:bg-opacity-80 px-4 py-1 w-fit">
                 offert.allverk.se
-              </WindowButton>{' '}
+              </offertAllverkStore.Button>{' '}
               <p className="text-sm opacity-80">
                 Multi-tenant application + google ads integration (RR7 and Go)
               </p>
@@ -53,9 +47,8 @@ export default function Home() {
           </div>
         </div>
 
-        <WindowLayout
+        <allverkStore.Window
           defaultDock={(() => (window.innerWidth < 800 ? 'full' : 'right'))()}
-          useWindowStore={allverkStore}
           windowName={'allverk.se'}
         >
           <iframe
@@ -65,11 +58,10 @@ export default function Home() {
             `}
             src="https://www.allverk.se/all/all/all"
           ></iframe>
-        </WindowLayout>
+        </allverkStore.Window>
 
-        <WindowLayout
+        <offertAllverkStore.Window
           defaultDock={(() => (window.innerWidth < 800 ? 'full' : 'left'))()}
-          useWindowStore={offertAllverkStore}
           windowName={'offert.allverk.se'}
         >
           <iframe
@@ -79,13 +71,9 @@ export default function Home() {
             `}
             src="https://offert.allverk.se/"
           ></iframe>
-        </WindowLayout>
+        </offertAllverkStore.Window>
 
-        <WindowLayout
-          defaultDock="full"
-          useWindowStore={myStackStore}
-          windowName={<CodeXml className="text-zinc-400" />}
-        >
+        <myStackStore.Window defaultDock="full" windowName={<CodeXml className="text-zinc-400" />}>
           <div className="w-full h-full p-6 md:p-10 flex justify-center">
             <section className="max-w-xl w-full flex flex-col gap-12">
               {/* Profile Section */}
@@ -191,7 +179,7 @@ export default function Home() {
                   <div className="flex flex-col gap-2">
                     <h3 className="font-semibold text-zinc-800">2. Wrap with WorkspaceLayout</h3>
                     <pre className="bg-zinc-100 p-3 rounded-md overflow-x-auto text-xs">
-{`<WorkspaceLayout>
+                      {`<WorkspaceLayout>
   {/* WindowLayout components */}
 </WorkspaceLayout>`}
                     </pre>
@@ -205,7 +193,7 @@ export default function Home() {
                   <div className="flex flex-col gap-2">
                     <h3 className="font-semibold text-zinc-800">3. Render a Window</h3>
                     <pre className="bg-zinc-100 p-3 rounded-md overflow-x-auto text-xs">
-{`<WindowLayout
+                      {`<WindowLayout
   useWindowStore={myWindow}
   windowName="My Window"
   defaultDock="right"
@@ -225,7 +213,7 @@ export default function Home() {
                   <div className="flex flex-col gap-2">
                     <h3 className="font-semibold text-zinc-800">4. Control with WindowButton</h3>
                     <pre className="bg-zinc-100 p-3 rounded-md overflow-x-auto text-xs">
-{`<WindowButton useWindowStore={myWindow}>
+                      {`<WindowButton useWindowStore={myWindow}>
   <p>Open Window</p>
 </WindowButton>`}
                     </pre>
@@ -292,24 +280,24 @@ export default function Home() {
               </footer>
             </section>
           </div>
-        </WindowLayout>
+        </myStackStore.Window>
       </WorkspaceLayout>
 
       <nav className="fixed bottom-0 left-0 w-full h-12 bg-neutral-900 flex gap-2 py-2 px-4 justify-between z-50">
         <div className="flex gap-2 items-center">
-          <WindowButton useWindowStore={myStackStore} styles="px-2">
+          <myStackStore.Button className="px-2">
             <CodeXml className="text-zinc-400 hover:text-zinc-50" />
-          </WindowButton>
-          <WindowButton useWindowStore={allverkStore} styles="px-2">
+          </myStackStore.Button>
+          <allverkStore.Button className="px-2">
             <p className="font-mono text-zinc-400 hover:text-zinc-200 text-xs sm:text-base">
               Allverk
             </p>
-          </WindowButton>
-          <WindowButton useWindowStore={offertAllverkStore} styles="px-2">
+          </allverkStore.Button>
+          <offertAllverkStore.Button className="px-2">
             <p className="font-mono text-zinc-400 hover:text-zinc-200 text-xs sm:text-base">
               Offert.allverk
             </p>
-          </WindowButton>
+          </offertAllverkStore.Button>
         </div>
 
         <div className="flex gap-4 items-center">
