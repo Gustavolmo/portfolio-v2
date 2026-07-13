@@ -15,7 +15,7 @@ export default function WindowDesktopButton({ title, Button, Icon }: Prop) {
         isOpenClassName="brightness-150"
         isActiveClassName="brightness-150"
         isClosedClassName="brightness-100"
-        className="text-zinc-100 w-fit p-4 rounded-md bg-zinc-600/50"
+        className="text-zinc-100 w-fit p-4 rounded-md bg-zinc-600/50 border-b-2 border-b-zinc-400"
       >
         <Icon className="h-10 w-10 text-zinc-100" />
       </Button>
