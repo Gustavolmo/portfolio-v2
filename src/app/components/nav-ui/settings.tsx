@@ -19,17 +19,17 @@ export default function NavbarSettings() {
           `}
       >
         <article className="flex flex-col gap-2 items-start text-zinc-200">
-          <button onClick={() => themeApi.setTheme('clinic', '-')}>clinic</button>
-          <button
-            onClick={() => themeApi.setTheme('sysAdminDefault', 'dark-rays-desktop-background')}
-          >
-            sysAdmin <span className='text-xs font-extralight'>(deafult)</span>
+          <button onClick={() => themeApi.setTheme('clinic', 'clinic-desktop-background')}>
+            clinic
           </button>
           <button
             onClick={() => themeApi.setTheme('sysAdminDefault', 'dark-rays-desktop-background')}
           >
-            
+            sysAdmin <span className="text-xs font-extralight">(deafult)</span>
           </button>
+          <button
+            onClick={() => themeApi.setTheme('sysAdminDefault', 'dark-rays-desktop-background')}
+          ></button>
         </article>
       </section>
 

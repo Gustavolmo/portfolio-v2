@@ -1,4 +1,4 @@
-export type BackgroundClasse = 'dark-rays-desktop-background' | '-'
+export type BackgroundClasse = 'dark-rays-desktop-background' | 'clinic-desktop-background'
 export type ThemeRepository = Record<ThemeProperty, string>
 
 export type ThemeName = 'sysAdminDefault' | 'clinic'
@@ -27,6 +27,7 @@ export type ThemeProperty =
   | '--navbar-window-button-line-height'
   | '--navbar-window-button-height'
   | '--navbar-window-button-padding-inline'
+  | '--navbar-window-button-radius'
   //.theme-navbar-window-button
   | '--navbar-settings-button-color'
   //.theme-desktop-window-icon

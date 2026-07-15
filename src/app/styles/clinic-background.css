@@ -1,0 +1,161 @@
+@property --clinic-glow-x {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 20%;
+}
+
+@property --clinic-glow-y {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 25%;
+}
+
+@property --clinic-accent-x {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 80%;
+}
+
+@property --clinic-accent-y {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 70%;
+}
+
+@property --clinic-grid-opacity {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0.045;
+}
+
+@property --clinic-glow-opacity {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0.16;
+}
+
+.clinic-desktop-background {
+  position: absolute;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      #f8fcfd 0%,
+      #eef8fa 45%,
+      #e8f3f6 100%
+    );
+}
+
+.clinic-desktop-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  --clinic-glow-x: 20%;
+  --clinic-glow-y: 25%;
+  --clinic-accent-x: 80%;
+  --clinic-accent-y: 70%;
+  --clinic-glow-opacity: 0.16;
+
+  background:
+    radial-gradient(
+      circle at var(--clinic-glow-x) var(--clinic-glow-y),
+      rgb(56 189 248 / var(--clinic-glow-opacity)) 0%,
+      rgb(125 211 252 / 0.08) 18%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at var(--clinic-accent-x) var(--clinic-accent-y),
+      rgb(45 212 191 / 0.12) 0%,
+      rgb(153 246 228 / 0.06) 20%,
+      transparent 45%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      rgb(255 255 255 / 0.48) 42%,
+      rgb(255 255 255 / 0.16) 52%,
+      transparent 68%
+    );
+
+  animation: clinic-ambient-glow 40s ease-in-out infinite alternate;
+}
+
+.clinic-desktop-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  --clinic-grid-opacity: 0.045;
+
+  background-image:
+    linear-gradient(
+      rgb(14 116 144 / var(--clinic-grid-opacity)) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(14 116 144 / var(--clinic-grid-opacity)) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+  mask-image:
+    linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 0.7),
+      rgb(0 0 0 / 0.28) 65%,
+      transparent
+    );
+
+  animation: clinic-grid-drift 80s linear infinite;
+}
+
+@keyframes clinic-ambient-glow {
+  0% {
+    --clinic-glow-x: 18%;
+    --clinic-glow-y: 22%;
+    --clinic-accent-x: 82%;
+    --clinic-accent-y: 72%;
+    --clinic-glow-opacity: 0.12;
+  }
+
+  50% {
+    --clinic-glow-x: 34%;
+    --clinic-glow-y: 30%;
+    --clinic-accent-x: 68%;
+    --clinic-accent-y: 62%;
+    --clinic-glow-opacity: 0.18;
+  }
+
+  100% {
+    --clinic-glow-x: 24%;
+    --clinic-glow-y: 42%;
+    --clinic-accent-x: 76%;
+    --clinic-accent-y: 48%;
+    --clinic-glow-opacity: 0.14;
+  }
+}
+
+@keyframes clinic-grid-drift {
+  from {
+    background-position:
+      0 0,
+      0 0;
+  }
+
+  to {
+    background-position:
+      40px 40px,
+      40px 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clinic-desktop-background::before,
+  .clinic-desktop-background::after {
+    animation: none;
+  }
+}

@@ -19,7 +19,7 @@ export const themeApi = {
     }
   },
 
-  setThemeFromMemory: () => {
+  initThemeFromMemory: () => {
     Object.entries(themeRepository.sysAdminDefault).forEach(([property, defaultValue]) => {
       const styleValue = memoryApi.getSavedStyleProp(property as ThemeProperty) ?? defaultValue
       document.documentElement.style.setProperty(property, styleValue)
@@ -47,4 +47,4 @@ export const cssPropertyApi = {
   },
 }
 
-themeApi.setThemeFromMemory()
+themeApi.initThemeFromMemory()

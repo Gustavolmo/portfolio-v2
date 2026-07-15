@@ -6,6 +6,7 @@ import WindowNavButton from './components/window-ui/window-nav-button.tsx'
 import NavbarSettings from './components/nav-ui/settings.tsx'
 import WindowView from './components/window-ui/window-view.tsx'
 import './styles/dark-rays-background.css'
+import './styles/clinic-background.css'
 import { useThemeStore } from './app-theme/theme-state.ts'
 
 export default function Home() {

@@ -22,6 +22,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--navbar-window-button-line-height': '1rem',
     '--navbar-window-button-height': '2.25rem',
     '--navbar-window-button-padding-inline': '1rem',
+    '--navbar-window-button-radius': '0',
 
     '--navbar-settings-button-color': '#f4f4f5',
 
@@ -51,8 +52,8 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
   },
 
   clinic: {
-    '--window-radius': '14px',
-    '--window-bg-color': '#f8fafc',
+    '--window-radius': '8px',
+    '--window-bg-color': '#f8fafc99',
     '--window-border-color': '#bae6fd',
     '--window-border-style': 'solid',
     '--window-border-thickness': '1px',
@@ -60,17 +61,18 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--window-navhandle-bg-color': '#e0f2fe',
     '--window-navhandle-title-color': '#0c4a6e',
 
-    '--navbar-bg-color': '#ffffff',
+    '--navbar-bg-color': '#ffffff10',
     '--navbar-opacity': '100%',
     '--navbar-justify': 'space-between',
     '--navbar-tabs-gap': '0.5rem',
 
-    '--navbar-window-button-bg': '#f0f9ff',
-    '--navbar-window-button-color': '#0369a1',
+    '--navbar-window-button-bg': '#ffffff20',
+    '--navbar-window-button-color': '#1e3a8a',
     '--navbar-window-button-font-size': '0.75rem',
     '--navbar-window-button-line-height': '1rem',
-    '--navbar-window-button-height': '2.5rem',
+    '--navbar-window-button-height': '2rem',
     '--navbar-window-button-padding-inline': '1rem',
+    '--navbar-window-button-radius': '4px',
 
     '--navbar-settings-button-color': '#0284c7',
 
