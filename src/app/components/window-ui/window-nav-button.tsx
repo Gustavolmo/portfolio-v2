@@ -7,12 +7,11 @@ type Prop = {
 
 export default function WindowNavButton({ title, Button }: Prop) {
   return (
-    <div className="flex flex-col items-center z-0 h-10">
+    <div className="flex flex-col items-center z-0 h-full">
       <Button
-        isOpenClassName="text-zinc-400 bg-white/10"
-        isActiveClassName="text-white bg-white/25"
-        isClosedClassName="text-zinc-600"
-        className="text-zinc-600 text-xs px-4 h-full"
+        isOpenClassName=" brightness-[135%]"
+        isActiveClassName="brightness-200"
+        className="theme-navbar-window-button"
       >
         {title}
       </Button>

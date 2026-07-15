@@ -1,31 +1,35 @@
+import { rwm } from '@gustavolmo/react-window-manager'
 import { Settings } from 'lucide-react'
 import { useState } from 'react'
+import { themeApi } from '../../app-theme/theme-api.ts'
 
 export default function NavbarSettings() {
   const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false)
+  const { activeWindowId } = rwm.workspaceState()
+  const { isDragging, resizeAction } = rwm.windowRegistry[activeWindowId]()
 
   return (
     <div className="relative z-[100]">
       <section
-        className={`
-          absolute p-4  bg-zinc-400/60 
-          rounded-md border-b-2 border-b-zinc-200
-          bottom-12 transition-all
-          ${isSettingsOpen ? 'right-0' : 'right-[-120px]'} 
+        className={` ${isDragging || resizeAction ? 'pointer-events-none' : ''}
+          absolute p-4 bottom-12 bg-zinc-950/50 backdrop-blur-md
+          rounded-md border border-zinc-800 w-[80vw] h-[520px] sm:w-[500px] sm:h-[60vh]
+          transition-all
+          ${isSettingsOpen ? 'right-0' : 'right-[-600px]'} 
           `}
       >
-        <article className="flex flex-col gap-2">
-          <p>option</p>
-          <p>option</p>
-          <p>option</p>
-          <p>option</p>
-          <p>option</p>
-          <p>option</p>
+        <article className="flex flex-col gap-2 items-start text-zinc-200">
+          <button onClick={() => themeApi.setTheme('clinic')}>apply clinic</button>
+          <button onClick={() => themeApi.setTheme('sysAdmin')}>apply sysAdmin</button>
+          <button onClick={() => themeApi.setTheme('sysAdmin')}>apply default</button>
         </article>
       </section>
+
       <Settings
         onClick={() => setIsSettingsOpen(!isSettingsOpen)}
-        className={`text-zinc-100 shrink-0 hover:cursor-pointer`}
+        className={`
+          ${isSettingsOpen ? 'brightness-100' : 'brightness-50'} 
+          theme-navbar-settings-button shrink-0 hover:cursor-pointer`}
       />
     </div>
   )

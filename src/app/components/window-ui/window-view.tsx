@@ -10,7 +10,12 @@ type Prop = {
 
 export default function WindowView({ title, children, Window, windowNavChildren }: Prop) {
   return (
-    <Window navbarChildren={windowNavChildren} className="theme-window" windowName={title}>
+    <Window
+      navbarChildren={windowNavChildren}
+      className="theme-window"
+      navbarClassName="theme-window-navhandle"
+      windowName={title}
+    >
       {children}
     </Window>
   )

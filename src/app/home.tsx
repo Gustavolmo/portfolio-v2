@@ -4,14 +4,14 @@ import { FolderGit2, Mail, Router, UserRound } from 'lucide-react'
 import WindowDesktopButton from './components/window-ui/window-desktop-icon.tsx'
 import WindowNavButton from './components/window-ui/window-nav-button.tsx'
 import NavbarSettings from './components/nav-ui/settings.tsx'
-import './styles/background-animation.css'
 import WindowView from './components/window-ui/window-view.tsx'
+import './styles/dark-rays-background.css'
 
 export default function Home() {
   return (
     <main className="fixed w-full h-full flex flex-col">
       <WorkspaceLayout className="h-full w-full grow">
-        <div className="p-8 md:p-16 w-full h-full desktop-background mb-12">
+        <div className="p-8 md:p-16 w-full h-full dark-rays-desktop-background mb-12">
           <WindowView title="PROFILE" Window={profile.Window}>
             PROFILE
           </WindowView>
@@ -42,8 +42,8 @@ export default function Home() {
         </div>
       </WorkspaceLayout>
 
-      <nav className="w-full h-12 bg-zinc-900/90 flex gap-2 px-4 items-center justify-between z-50">
-        <section className="flex w-fit overflow-x-auto">
+      <nav className="w-full h-12 theme-navbar flex px-4 items-center z-50">
+        <section className="flex w-fit overflow-x-auto theme-navbar-tabs">
           <WindowNavButton title="Profile" Button={profile.Button} />
           <WindowNavButton title="Projects" Button={projects.Button} />
           <WindowNavButton title="Email" Button={email.Button} />

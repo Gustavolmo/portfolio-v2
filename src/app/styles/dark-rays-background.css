@@ -74,13 +74,13 @@
   --alpha2: 0.05;
 }
 
-.desktop-background {
+.dark-rays-desktop-background {
   position: absolute;
   background: #0b1111;
   overflow: hidden;
 }
 
-.desktop-background::before {
+.dark-rays-desktop-background::before {
   content: '';
   position: absolute;
   inset: 0;
