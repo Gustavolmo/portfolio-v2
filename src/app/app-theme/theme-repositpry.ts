@@ -1,7 +1,7 @@
-import { themeNames, ThemeRepository } from "./model.ts";
+import { ThemeName, ThemeRepository } from './model.ts'
 
-export const themeRepository: Record<themeNames, ThemeRepository> = {
-  sysAdmin: {
+export const themeRepository: Record<ThemeName, ThemeRepository> = {
+  sysAdminDefault: {
     '--window-radius': '2px',
     '--window-bg-color': 'white',
     '--window-border-color': '#52525b',

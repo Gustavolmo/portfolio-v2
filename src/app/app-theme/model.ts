@@ -1,32 +1,35 @@
-// type BackgroundClasses = 'dark-rays-desktop-background'
+export type BackgroundClasse = 'dark-rays-desktop-background' | '-'
 export type ThemeRepository = Record<ThemeProperty, string>
 
-export type themeNames = 'sysAdmin' | 'clinic'
+export type ThemeName = 'sysAdminDefault' | 'clinic'
+export type ThemeState = ThemeName | 'custom'
 
 export type ThemeProperty =
+  //.theme-window
   | '--window-radius'
   | '--window-bg-color'
   | '--window-border-color'
   | '--window-border-style'
   | '--window-border-thickness'
-  //
+  //.theme-window-navhandle
   | '--window-navhandle-bg-color'
   | '--window-navhandle-title-color'
-  //
+  //.theme-window-navhandle-tabs
+  //.theme-navbar
   | '--navbar-bg-color'
   | '--navbar-opacity'
   | '--navbar-justify'
   | '--navbar-tabs-gap'
-  //
+  //.theme-navbar-tabs
   | '--navbar-window-button-bg'
   | '--navbar-window-button-color'
   | '--navbar-window-button-font-size'
   | '--navbar-window-button-line-height'
   | '--navbar-window-button-height'
   | '--navbar-window-button-padding-inline'
-  //
+  //.theme-navbar-window-button
   | '--navbar-settings-button-color'
-  //
+  //.theme-desktop-window-icon
   | '--desktop-window-icon-color'
   | '--desktop-window-icon-width'
   | '--desktop-window-icon-padding'
@@ -44,6 +47,6 @@ export type ThemeProperty =
   | '--desktop-window-icon-border-right-color'
   | '--desktop-window-icon-border-bottom-color'
   | '--desktop-window-icon-border-left-color'
-  //
+  //.theme-text-primary
   | '--text-primary-color'
   | '--text-primary-font-family'

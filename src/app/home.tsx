@@ -6,12 +6,15 @@ import WindowNavButton from './components/window-ui/window-nav-button.tsx'
 import NavbarSettings from './components/nav-ui/settings.tsx'
 import WindowView from './components/window-ui/window-view.tsx'
 import './styles/dark-rays-background.css'
+import { useThemeStore } from './app-theme/theme-state.ts'
 
 export default function Home() {
+  const { selectedBackground } = useThemeStore()
+
   return (
     <main className="fixed w-full h-full flex flex-col">
       <WorkspaceLayout className="h-full w-full grow">
-        <div className="p-8 md:p-16 w-full h-full dark-rays-desktop-background mb-12">
+        <div className={`p-8 md:p-16 w-full h-full ${selectedBackground} mb-12`}>
           <WindowView title="PROFILE" Window={profile.Window}>
             PROFILE
           </WindowView>

@@ -1,30 +1,50 @@
-import { themeNames, ThemeProperty } from "./model.ts"
-import { themeRepository } from "./theme-repositpry.ts"
+import { memoryApi } from '../app-memory/memory-api.ts'
+import { BackgroundClasse as BackgroundClass, ThemeName, ThemeProperty } from './model.ts'
+import { themeRepository } from './theme-repositpry.ts'
+import { useThemeStore } from './theme-state.ts'
 
 export const themeApi = {
-  setTheme: (themeName: themeNames) => {
+  setTheme: (themeName: ThemeName, background?: BackgroundClass) => {
     Object.entries(themeRepository[themeName]).forEach(([property, styleValue]) => {
-      cssPropertyApi.updateStyleProp(property as ThemeProperty, styleValue)
+      document.documentElement.style.setProperty(property, styleValue)
+      memoryApi.saveStyleProp(property as ThemeProperty, styleValue)
     })
+
+    useThemeStore.setState({ selectedTheme: themeName })
+    memoryApi.saveSelectedThemeName(themeName)
+
+    if (background) {
+      useThemeStore.setState({ selectedBackground: background })
+      memoryApi.saveSelectedBackground(background)
+    }
   },
 
-  setLatestTheme: () => {
-    Object.entries(themeRepository.sysAdmin).forEach(([property, defaultValue]) => {
-      const styleValue = cssPropertyApi.getSavedStyleProp(property as ThemeProperty) ?? defaultValue
-      cssPropertyApi.updateStyleProp(property as ThemeProperty, styleValue)
+  setThemeFromMemory: () => {
+    Object.entries(themeRepository.sysAdminDefault).forEach(([property, defaultValue]) => {
+      const styleValue = memoryApi.getSavedStyleProp(property as ThemeProperty) ?? defaultValue
+      document.documentElement.style.setProperty(property, styleValue)
     })
+
+    const background = memoryApi.getSavedSelectedBackground()
+    if (background) useThemeStore.setState({ selectedBackground: background })
+
+    const themeName = memoryApi.getSavedThemeName()
+    if (themeName) useThemeStore.setState({ selectedTheme: themeName })
   },
 }
 
 export const cssPropertyApi = {
-  updateStyleProp: (property: ThemeProperty, value: string) => {
+  setStyleProp: (property: ThemeProperty, value: string) => {
     document.documentElement.style.setProperty(property, value)
-    localStorage.setItem(property, value)
+    memoryApi.saveStyleProp(property, value)
+    memoryApi.saveSelectedThemeName('custom')
+    useThemeStore.setState({ selectedTheme: 'custom' })
   },
 
-  getSavedStyleProp: (property: ThemeProperty): string | null => {
-    return localStorage.getItem(property)
+  setBackground: (background: BackgroundClass) => {
+    useThemeStore.setState({ selectedBackground: background })
+    memoryApi.saveSelectedBackground(background)
   },
 }
 
-themeApi.setLatestTheme()
+themeApi.setThemeFromMemory()
