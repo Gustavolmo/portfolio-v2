@@ -1,7 +1,12 @@
-export type BackgroundClasse = 'dark-rays-desktop-background' | 'clinic-desktop-background'
+export type BackgroundClasse =
+  | 'dark-rays-desktop-background'
+  | 'clinic-desktop-background'
+  | 'zen-desktop-background'
+  | 'cyberpunk-neon-desktop-background'
+  | 'blackhat-desktop-background'
 export type ThemeRepository = Record<ThemeProperty, string>
 
-export type ThemeName = 'sysAdminDefault' | 'clinic'
+export type ThemeName = 'sysAdminDefault' | 'clinic' | 'zen' | 'cyberpunkNeon' | 'blackhat'
 export type ThemeState = ThemeName | 'custom'
 
 export type ThemeProperty =

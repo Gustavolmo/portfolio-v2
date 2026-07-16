@@ -7,6 +7,9 @@ import NavbarSettings from './components/nav-ui/settings.tsx'
 import WindowView from './components/window-ui/window-view.tsx'
 import './styles/dark-rays-background.css'
 import './styles/clinic-background.css'
+import './styles/zen-background.css'
+import './styles/cyberpunk-neon-background.css'
+import './styles/blackhat-background.css'
 import { useThemeStore } from './app-theme/theme-state.ts'
 import ProjectsWindowContent from './components/window-ui/projects/projects-window-content.tsx'
 
@@ -17,7 +20,7 @@ export default function Home() {
     <main className="fixed w-full h-full flex flex-col">
       <WorkspaceLayout className="h-full w-full grow">
         <div className={`p-8 md:p-16 w-full h-full ${selectedBackground} mb-12`}>
-          <WindowView windowName="Profilw" Window={profile.Window}>
+          <WindowView windowName="Profile" Window={profile.Window}>
             PROFILE
           </WindowView>
           <WindowView windowName="Projects" Window={projects.Window}>
