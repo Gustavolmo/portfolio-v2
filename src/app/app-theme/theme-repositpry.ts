@@ -57,7 +57,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--desktop-window-icon-border-left-color': 'transparent',
 
     '--text-primary-color': '#f4f4f5',
-    '--text-primary-font-family': 'Arial, Helvetica, sans-serif',
+    '--text-primary-font-family': 'monospace',
   },
 
   clinic: {

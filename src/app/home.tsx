@@ -1,5 +1,5 @@
 import { WorkspaceLayout } from '@gustavolmo/react-window-manager'
-import { email, profile, projects, serverStat } from './components/window-ui/window-init.tsx'
+import { email, profile, projects, serverStat } from './window-init.tsx'
 import { FolderGit2, Mail, Router, UserRound } from 'lucide-react'
 import WindowDesktopButton from './components/window-ui/window-desktop-icon.tsx'
 import WindowNavButton from './components/window-ui/window-nav-button.tsx'
