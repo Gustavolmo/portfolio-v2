@@ -15,6 +15,7 @@ export type ThemeProperty =
   | '--window-navhandle-bg-color'
   | '--window-navhandle-title-color'
   //.theme-window-navhandle-tabs
+  | '--window-navhandle-tabs-bg-color'
   //.theme-navbar
   | '--navbar-bg-color'
   | '--navbar-opacity'

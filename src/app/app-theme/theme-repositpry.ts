@@ -16,6 +16,8 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--navbar-justify': 'space-between',
     '--navbar-tabs-gap': '0px',
 
+    '--window-navhandle-tabs-bg-color' : '#18181b ',
+
     '--navbar-window-button-bg': '#18181b',
     '--navbar-window-button-color': '#a1a1aa',
     '--navbar-window-button-font-size': '0.75rem',
@@ -74,6 +76,8 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--navbar-opacity': '100%',
     '--navbar-justify': 'space-between',
     '--navbar-tabs-gap': '0.5rem',
+
+    '--window-navhandle-tabs-bg-color' : '#ffffff',
 
     '--navbar-window-button-bg': '#EEEEEE20',
     '--navbar-window-button-color': '#444444',

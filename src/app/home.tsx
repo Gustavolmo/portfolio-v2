@@ -8,6 +8,7 @@ import WindowView from './components/window-ui/window-view.tsx'
 import './styles/dark-rays-background.css'
 import './styles/clinic-background.css'
 import { useThemeStore } from './app-theme/theme-state.ts'
+import ProjectsWindowContent from './components/window-ui/projects/projects-window-content.tsx'
 
 export default function Home() {
   const { selectedBackground } = useThemeStore()
@@ -16,16 +17,16 @@ export default function Home() {
     <main className="fixed w-full h-full flex flex-col">
       <WorkspaceLayout className="h-full w-full grow">
         <div className={`p-8 md:p-16 w-full h-full ${selectedBackground} mb-12`}>
-          <WindowView title="PROFILE" Window={profile.Window}>
+          <WindowView windowName="Profilw" Window={profile.Window}>
             PROFILE
           </WindowView>
-          <WindowView title="PROJECTS" Window={projects.Window}>
-            PROJECTS
+          <WindowView windowName="Projects" Window={projects.Window}>
+            <ProjectsWindowContent />
           </WindowView>
-          <WindowView title="EMAIL" Window={email.Window}>
+          <WindowView windowName="Email" Window={email.Window}>
             EMAIL
           </WindowView>
-          <WindowView title="SYSTEM" Window={serverStat.Window}>
+          <WindowView windowName="System" Window={serverStat.Window}>
             SYSTEM
           </WindowView>
 

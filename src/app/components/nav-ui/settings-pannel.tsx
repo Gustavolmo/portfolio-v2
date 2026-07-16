@@ -40,7 +40,7 @@ function ThemeSelection() {
         isSelected={selectedTheme === 'clinic'}
         onClick={() => themeApi.setTheme('clinic', 'clinic-desktop-background')}
       >
-        <p className="flex items-center rounded-sm bg-white px-2 text-cyan-500 border-b-2 border-cyan-300 h-20">
+        <p className="flex items-center rounded-sm bg-white px-4 text-cyan-500 border-b-4 border-cyan-600 h-20">
           Clinical
         </p>
       </ThemeButton>
