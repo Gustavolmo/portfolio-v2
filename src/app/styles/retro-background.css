@@ -1,0 +1,94 @@
+@property --retro-cloud-x {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 18%;
+}
+
+@property --retro-cloud-y {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 18%;
+}
+
+@property --retro-hill-shift {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+.retro-desktop-background {
+  position: absolute;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at var(--retro-cloud-x) var(--retro-cloud-y), rgb(255 255 255 / 0.9) 0%, rgb(255 255 255 / 0.42) 12%, transparent 26%),
+    radial-gradient(ellipse at 72% 20%, rgb(255 255 255 / 0.76) 0%, rgb(255 255 255 / 0.32) 10%, transparent 24%),
+    linear-gradient(180deg, #5da6e8 0%, #96c8f0 44%, #d9eefc 62%, #69a72f 63%, #3d7e20 100%);
+}
+
+.retro-desktop-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  --retro-cloud-x: 18%;
+  --retro-cloud-y: 18%;
+  --retro-hill-shift: 0%;
+
+  background:
+    radial-gradient(ellipse at calc(20% + var(--retro-hill-shift)) 88%, #7fba41 0%, #5a9a2c 28%, transparent 54%),
+    radial-gradient(ellipse at calc(72% - var(--retro-hill-shift)) 86%, #6fad38 0%, #3d7e20 30%, transparent 58%),
+    linear-gradient(7deg, transparent 0%, transparent 58%, rgb(255 255 255 / 0.2) 59%, transparent 61%),
+    linear-gradient(180deg, transparent 0%, transparent 66%, rgb(24 24 27 / 0.16) 100%);
+
+  animation: retro-scenery-drift 80s ease-in-out infinite alternate;
+}
+
+.retro-desktop-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 0.08) 0 1px,
+      transparent 1px 4px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(255 255 255 / 0.18) 0%,
+      transparent 18%,
+      transparent 82%,
+      rgb(24 24 27 / 0.12) 100%
+    );
+
+  mix-blend-mode: soft-light;
+}
+
+@keyframes retro-scenery-drift {
+  0% {
+    --retro-cloud-x: 16%;
+    --retro-cloud-y: 18%;
+    --retro-hill-shift: -2%;
+  }
+
+  50% {
+    --retro-cloud-x: 24%;
+    --retro-cloud-y: 16%;
+    --retro-hill-shift: 2%;
+  }
+
+  100% {
+    --retro-cloud-x: 20%;
+    --retro-cloud-y: 22%;
+    --retro-hill-shift: 0%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .retro-desktop-background::before {
+    animation: none;
+  }
+}

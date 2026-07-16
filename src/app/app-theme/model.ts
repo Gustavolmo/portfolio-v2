@@ -4,9 +4,20 @@ export type BackgroundClasse =
   | 'zen-desktop-background'
   | 'cyberpunk-neon-desktop-background'
   | 'blackhat-desktop-background'
+  | 'galaxy-desktop-background'
+  | 'deluxe-desktop-background'
+  | 'retro-desktop-background'
 export type ThemeRepository = Record<ThemeProperty, string>
 
-export type ThemeName = 'sysAdminDefault' | 'clinic' | 'zen' | 'cyberpunkNeon' | 'blackhat'
+export type ThemeName =
+  | 'sysAdminDefault'
+  | 'clinic'
+  | 'zen'
+  | 'cyberpunkNeon'
+  | 'blackhat'
+  | 'galaxy'
+  | 'deluxe'
+  | 'retro'
 export type ThemeState = ThemeName | 'custom'
 
 export type ThemeProperty =
