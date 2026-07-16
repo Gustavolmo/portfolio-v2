@@ -12,7 +12,7 @@ export default function SettingsPannel() {
         <button
           onClick={() => setSelectedTab('theme')}
           className={`
-            ${selectedTab === 'theme' ? 'bg-zinc-600/25' : 'bg-zinc-600/10'}
+            ${selectedTab === 'theme' ? 'bg-zinc-600/25' : 'bg-zinc-600/0'}
             bg-zinc-600/25 py-2 px-4 rounded-tl-sm`}
         >
           Themes
@@ -20,7 +20,7 @@ export default function SettingsPannel() {
         <button
           onClick={() => setSelectedTab('customize')}
           className={`
-            ${selectedTab === 'customize' ? 'bg-zinc-600/25' : 'bg-zinc-600/10'}
+            ${selectedTab === 'customize' ? 'bg-zinc-600/25' : 'bg-zinc-600/0'}
             bg-zinc-600/25 py-2 px-4 rounded-tr-sm `}
         >
           Customize
