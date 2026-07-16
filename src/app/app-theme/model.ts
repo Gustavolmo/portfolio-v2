@@ -19,8 +19,9 @@ export type ThemeProperty =
   | '--navbar-bg-color'
   | '--navbar-opacity'
   | '--navbar-justify'
+  // .theme-navbar-tabs
   | '--navbar-tabs-gap'
-  //.theme-navbar-tabs
+  //.theme-navbar-window-button
   | '--navbar-window-button-bg'
   | '--navbar-window-button-color'
   | '--navbar-window-button-font-size'
@@ -28,7 +29,19 @@ export type ThemeProperty =
   | '--navbar-window-button-height'
   | '--navbar-window-button-padding-inline'
   | '--navbar-window-button-radius'
-  //.theme-navbar-window-button
+  | '--navbar-window-button-border-top-width'
+  | '--navbar-window-button-border-right-width'
+  | '--navbar-window-button-border-bottom-width'
+  | '--navbar-window-button-border-left-width'
+  | '--navbar-window-button-border-top-style'
+  | '--navbar-window-button-border-right-style'
+  | '--navbar-window-button-border-bottom-style'
+  | '--navbar-window-button-border-left-style'
+  | '--navbar-window-button-border-top-color'
+  | '--navbar-window-button-border-right-color'
+  | '--navbar-window-button-border-bottom-color'
+  | '--navbar-window-button-border-left-color'
+  //.theme-navbar-settings-button
   | '--navbar-settings-button-color'
   //.theme-desktop-window-icon
   | '--desktop-window-icon-color'

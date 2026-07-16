@@ -4,19 +4,17 @@ import { themeRepository } from './theme-repositpry.ts'
 import { useThemeStore } from './theme-state.ts'
 
 export const themeApi = {
-  setTheme: (themeName: ThemeName, background?: BackgroundClass) => {
+  setTheme: (themeName: ThemeName, background: BackgroundClass) => {
     Object.entries(themeRepository[themeName]).forEach(([property, styleValue]) => {
       document.documentElement.style.setProperty(property, styleValue)
       memoryApi.saveStyleProp(property as ThemeProperty, styleValue)
     })
 
     useThemeStore.setState({ selectedTheme: themeName })
-    memoryApi.saveSelectedThemeName(themeName)
+    useThemeStore.setState({ selectedBackground: background })
 
-    if (background) {
-      useThemeStore.setState({ selectedBackground: background })
-      memoryApi.saveSelectedBackground(background)
-    }
+    memoryApi.saveSelectedThemeName(themeName)
+    memoryApi.saveSelectedBackground(background)
   },
 
   initThemeFromMemory: () => {

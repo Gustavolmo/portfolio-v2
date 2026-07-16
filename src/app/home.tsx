@@ -31,11 +31,7 @@ export default function Home() {
 
           <section
             className="
-            max-w-4xl
-              grid
-              w-full
-              gap-8
-              justify-items-center
+              max-w-4xl grid w-full gap-8 justify-items-center
               [grid-template-columns:repeat(auto-fit,minmax(120px,1fr))]"
           >
             <WindowDesktopButton title="Profile" Button={profile.Button} Icon={UserRound} />

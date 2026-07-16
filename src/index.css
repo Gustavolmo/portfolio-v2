@@ -41,6 +41,19 @@ body {
   height: var(--navbar-window-button-height);
   padding-inline: var(--navbar-window-button-padding-inline);
   border-radius: var(--navbar-window-button-radius);
+
+  border-top-width: var(--navbar-window-button-border-top-width);
+  border-right-width: var(--navbar-window-button-border-right-width);
+  border-bottom-width: var(--navbar-window-button-border-bottom-width);
+  border-left-width: var(--navbar-window-button-border-left-width);
+  border-top-style: var(--navbar-window-button-border-top-style);
+  border-right-style: var(--navbar-window-button-border-right-style);
+  border-bottom-style: var(--navbar-window-button-border-bottom-style);
+  border-left-style: var(--navbar-window-button-border-left-style);
+  border-top-color: var(--navbar-window-button-border-top-color);
+  border-right-color: var(--navbar-window-button-border-right-color);
+  border-bottom-color: var(--navbar-window-button-border-bottom-color);
+  border-left-color: var(--navbar-window-button-border-left-color);
 }
 
 .theme-navbar-settings-button {
