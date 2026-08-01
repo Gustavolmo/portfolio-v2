@@ -1,4 +1,4 @@
-import { BackgroundClasse, ThemeName, ThemeProperty, ThemeState } from '../app-theme/model.ts'
+import { BackgroundClass, ThemeName, ThemeProperty, ThemeState } from '../app-theme/model.ts'
 
 export const memoryApi = {
   saveSelectedThemeName: (theme: ThemeName | 'custom') => {
@@ -22,6 +22,6 @@ export const memoryApi = {
   },
 
   getSavedSelectedBackground: () => {
-    return localStorage.getItem('selected-background') as BackgroundClasse | null
+    return localStorage.getItem('selected-background') as BackgroundClass | null
   },
 }

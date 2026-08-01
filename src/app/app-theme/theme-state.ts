@@ -1,9 +1,9 @@
 import { create } from 'zustand'
-import { BackgroundClasse, ThemeState } from './model.ts'
+import { BackgroundClass, ThemeState } from './model.ts'
 
 type ThemeStore = {
   selectedTheme: ThemeState
-  selectedBackground: BackgroundClasse
+  selectedBackground: BackgroundClass
 }
 
 export const useThemeStore = create<ThemeStore>(() => ({

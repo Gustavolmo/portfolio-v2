@@ -1,7 +1,8 @@
 import { WindowRegistration } from '@gustavolmo/react-window-manager'
+import { ReactNode } from 'react'
 
 type Prop = {
-  title: string
+  title: string | ReactNode
   Button: WindowRegistration['Button']
 }
 

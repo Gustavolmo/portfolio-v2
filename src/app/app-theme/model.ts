@@ -1,24 +1,11 @@
-export type BackgroundClasse =
-  | 'dark-rays-desktop-background'
-  | 'clinic-desktop-background'
-  | 'zen-desktop-background'
-  | 'cyberpunk-neon-desktop-background'
-  | 'blackhat-desktop-background'
-  | 'galaxy-desktop-background'
-  | 'deluxe-desktop-background'
-  | 'retro-desktop-background'
 export type ThemeRepository = Record<ThemeProperty, string>
+export type BackgroundClass =
+  | 'dark-rays-desktop-background'
+  | 'blackhat-desktop-background'
+  | 'retro-desktop-background'
 
-export type ThemeName =
-  | 'sysAdminDefault'
-  | 'clinic'
-  | 'zen'
-  | 'cyberpunkNeon'
-  | 'blackhat'
-  | 'galaxy'
-  | 'deluxe'
-  | 'retro'
 export type ThemeState = ThemeName | 'custom'
+export type ThemeName = 'sysAdminDefault' | 'blackhat' | 'retro'
 
 export type ThemeProperty =
   //.theme-window

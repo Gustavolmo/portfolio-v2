@@ -1,5 +1,5 @@
 import { memoryApi } from '../app-memory/memory-api.ts'
-import { BackgroundClasse as BackgroundClass, ThemeName, ThemeProperty } from './model.ts'
+import { BackgroundClass, ThemeName, ThemeProperty } from './model.ts'
 import { themeRepository } from './theme-repositpry.ts'
 import { useThemeStore } from './theme-state.ts'
 
@@ -44,5 +44,3 @@ export const cssPropertyApi = {
     memoryApi.saveSelectedBackground(background)
   },
 }
-
-themeApi.initThemeFromMemory()

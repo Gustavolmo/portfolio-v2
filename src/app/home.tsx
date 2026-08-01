@@ -1,20 +1,18 @@
 import { WorkspaceLayout } from '@gustavolmo/react-window-manager'
-import { email, profile, projects, serverStat } from './window-init.tsx'
-import { FolderGit2, Mail, Router, UserRound } from 'lucide-react'
-import WindowDesktopButton from './components/window-ui/window-desktop-icon.tsx'
+import { themeApi } from './app-theme/theme-api.ts'
+import { email, profile, projects, serverStat, settings } from './window-init.tsx'
+import { FolderGit2, Mail, Router, Settings, UserRound } from 'lucide-react'
+import WindowDesktopButton from './components/window-ui/window-desktop-button.tsx'
 import WindowNavButton from './components/window-ui/window-nav-button.tsx'
-import NavbarSettings from './components/nav-ui/settings.tsx'
 import WindowView from './components/window-ui/window-view.tsx'
-import './styles/dark-rays-background.css'
-import './styles/clinic-background.css'
-import './styles/zen-background.css'
-import './styles/cyberpunk-neon-background.css'
-import './styles/blackhat-background.css'
-import './styles/galaxy-background.css'
-import './styles/deluxe-background.css'
-import './styles/retro-background.css'
+import './bg-styles/dark-rays-background.css'
+import './bg-styles/blackhat-background.css'
+import './bg-styles/retro-background.css'
 import { useThemeStore } from './app-theme/theme-state.ts'
 import ProjectsWindowContent from './components/window-ui/projects/projects-window-content.tsx'
+import SettingsPannel from './components/nav-ui/settings-pannel.tsx'
+
+themeApi.initThemeFromMemory()
 
 export default function Home() {
   const { selectedBackground } = useThemeStore()
@@ -34,6 +32,9 @@ export default function Home() {
           </WindowView>
           <WindowView windowName="System" Window={serverStat.Window}>
             SYSTEM
+          </WindowView>
+          <WindowView defaultDock='right' windowName="Settings" Window={settings.Window}>
+            <SettingsPannel />
           </WindowView>
 
           <section
@@ -57,7 +58,9 @@ export default function Home() {
           <WindowNavButton title="System" Button={serverStat.Button} />
         </section>
 
-        <NavbarSettings />
+        <div className="flex items-center justify-center">
+          <WindowNavButton title={<Settings />} Button={settings.Button} />
+        </div>
       </nav>
     </main>
   )

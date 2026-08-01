@@ -1,4 +1,4 @@
-import { WindowRegistration } from '@gustavolmo/react-window-manager'
+import { DockPosition, WindowRegistration } from '@gustavolmo/react-window-manager'
 import { ReactNode } from 'react'
 
 type Prop = {
@@ -6,11 +6,19 @@ type Prop = {
   children: ReactNode
   Window: WindowRegistration['Window']
   windowNavChildren?: ReactNode
+  defaultDock?: DockPosition
 }
 
-export default function WindowView({ windowName, children, Window, windowNavChildren }: Prop) {
+export default function WindowView({
+  windowName,
+  children,
+  Window,
+  windowNavChildren,
+  defaultDock,
+}: Prop) {
   return (
     <Window
+      defaultDock={defaultDock}
       navbarChildren={windowNavChildren}
       className="theme-window"
       navbarClassName="theme-window-navhandle overflow-visible"
