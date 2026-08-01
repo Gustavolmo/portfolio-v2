@@ -59,7 +59,10 @@ export default function Home() {
         </section>
 
         <div className="flex items-center justify-center">
-          <WindowNavButton title={<Settings />} Button={settings.Button} />
+          <WindowNavButton
+            title={<Settings className="h-5 w-5 theme-navbar-settings-button" />}
+            Button={settings.Button}
+          />
         </div>
       </nav>
     </main>

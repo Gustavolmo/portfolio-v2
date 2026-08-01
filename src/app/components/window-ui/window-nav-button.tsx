@@ -13,7 +13,7 @@ export default function WindowNavButton({ title, Button }: Prop) {
         isOpenClassName="brightness-[135%]"
         isActiveClassName="brightness-200"
         isClosedClassName="brightness-100"
-        className="theme-navbar-window-button theme-text-primary"
+        className="theme-navbar-window-button theme-text-font-family"
       >
         {title}
       </Button>

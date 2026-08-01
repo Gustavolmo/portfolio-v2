@@ -4,40 +4,40 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
   sysAdminDefault: {
     '--custom-background-color' : 'none',
     '--window-radius': '2px',
-    '--window-bg-color': 'white',
+    '--window-bg-color': '#888888',
     '--window-border-color': '#52525b',
     '--window-border-style': 'solid',
     '--window-border-thickness': '1px',
 
     '--window-navhandle-bg-color': '#262626',
-    '--window-navhandle-title-color': 'white',
 
     '--navbar-bg-color': '#18181b',
-    '--navbar-opacity': '10%',
+    '--navbar-opacity': '100%',
     '--navbar-justify': 'space-between',
     '--navbar-tabs-gap': '0px',
 
     '--window-navhandle-tabs-bg-color': '#18181b ',
+    '--window-navhandle-title-color': 'white ',
 
     '--navbar-window-button-bg': '#18181b',
     '--navbar-window-button-color': '#a1a1aa',
     '--navbar-window-button-font-size': '0.75rem',
     '--navbar-window-button-line-height': '1rem',
     '--navbar-window-button-height': '2.25rem',
-    '--navbar-window-button-padding-inline': '1rem',
+    '--navbar-window-button-padding-inline': '8px',
     '--navbar-window-button-radius': '0',
-    '--navbar-window-button-border-top-width': '',
-    '--navbar-window-button-border-right-width': '',
-    '--navbar-window-button-border-bottom-width': '',
-    '--navbar-window-button-border-left-width': '',
-    '--navbar-window-button-border-top-style': '',
-    '--navbar-window-button-border-right-style': '',
-    '--navbar-window-button-border-bottom-style': '',
-    '--navbar-window-button-border-left-style': '',
-    '--navbar-window-button-border-top-color': '',
-    '--navbar-window-button-border-right-color': '',
-    '--navbar-window-button-border-bottom-color': '',
-    '--navbar-window-button-border-left-color': '',
+    '--navbar-window-button-border-top-width': '0',
+    '--navbar-window-button-border-right-width': '0',
+    '--navbar-window-button-border-bottom-width': '0',
+    '--navbar-window-button-border-left-width': '0',
+    '--navbar-window-button-border-top-style': 'solid',
+    '--navbar-window-button-border-right-style': 'solid',
+    '--navbar-window-button-border-bottom-style': 'solid',
+    '--navbar-window-button-border-left-style': 'solid',
+    '--navbar-window-button-border-top-color': 'none',
+    '--navbar-window-button-border-right-color': 'none',
+    '--navbar-window-button-border-bottom-color': 'none',
+    '--navbar-window-button-border-left-color': 'none',
 
     '--navbar-settings-button-color': '#f4f4f5',
 
@@ -60,7 +60,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--desktop-window-icon-border-left-color': 'transparent',
 
     '--text-primary-color': '#f4f4f5',
-    '--text-primary-font-family': 'monospace',
+    '--text-primary-font-family': 'Arial',
   },
 
   blackhat: {
@@ -72,7 +72,6 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--window-border-thickness': '1px',
 
     '--window-navhandle-bg-color': '#001b0c',
-    '--window-navhandle-title-color': '#86efac',
 
     '--navbar-bg-color': '#000804',
     '--navbar-opacity': '100%',
@@ -80,13 +79,14 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--navbar-tabs-gap': '0px',
 
     '--window-navhandle-tabs-bg-color': '#001407',
+    '--window-navhandle-title-color': '#86efac',
 
     '--navbar-window-button-bg': '#001407',
     '--navbar-window-button-color': '#4ade80',
     '--navbar-window-button-font-size': '0.75rem',
     '--navbar-window-button-line-height': '1rem',
     '--navbar-window-button-height': '2rem',
-    '--navbar-window-button-padding-inline': '0.875rem',
+    '--navbar-window-button-padding-inline': '8px',
     '--navbar-window-button-radius': '0',
     '--navbar-window-button-border-top-width': '1px',
     '--navbar-window-button-border-right-width': '1px',
@@ -134,9 +134,9 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--window-border-thickness': '2px',
 
     '--window-navhandle-bg-color': '#777777',
-    '--window-navhandle-title-color': '#f8fafc',
+    '--window-navhandle-title-color': '#18181b',
 
-    '--navbar-bg-color': '#d8d6cc',
+    '--navbar-bg-color': '#dddddd',
     '--navbar-opacity': '100%',
     '--navbar-justify': 'space-between',
     '--navbar-tabs-gap': '0.375rem',
@@ -144,11 +144,11 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--window-navhandle-tabs-bg-color': '#b8b6ad',
 
     '--navbar-window-button-bg': '#777777',
-    '--navbar-window-button-color': '#f5f5f4',
+    '--navbar-window-button-color': '#18181b',
     '--navbar-window-button-font-size': '0.75rem',
     '--navbar-window-button-line-height': '1rem',
     '--navbar-window-button-height': '2rem',
-    '--navbar-window-button-padding-inline': '1rem',
+    '--navbar-window-button-padding-inline': '8px',
     '--navbar-window-button-radius': '0',
     '--navbar-window-button-border-top-width': '2px',
     '--navbar-window-button-border-right-width': '2px',

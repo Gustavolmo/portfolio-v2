@@ -45,7 +45,7 @@ export function SelectStyleControl({
           onChange={updateSelect}
         >
           {options.map((option) => (
-            <option key={option.value} value={option.value}>
+            <option className='text-zinc-800' key={option.value} value={option.value}>
               {option.label}
             </option>
           ))}

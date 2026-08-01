@@ -22,7 +22,7 @@ export default function WindowView({
       navbarChildren={windowNavChildren}
       className="theme-window"
       navbarClassName="theme-window-navhandle overflow-visible"
-      windowName={<p className="theme-text-primary">{windowName}</p>}
+      windowName={<p className="theme-text-font-family">{windowName}</p>}
     >
       {children}
     </Window>

@@ -21,7 +21,7 @@ body {
 
 .theme-window-navhandle {
   background-color: var(--window-navhandle-bg-color);
-  color: var(--window-navhandle-title-color);
+  color: var(--window-navhandle-title-color);  
 }
 
 .theme-window-navhandle-tabs {
@@ -30,7 +30,7 @@ body {
 
 .theme-navbar {
   background-color: var(--navbar-bg-color);
-  fill-opacity: var(--navbar-opacity);
+  opacity: var(--navbar-opacity);
   justify-content: var(--navbar-justify);
 }
 
@@ -51,10 +51,12 @@ body {
   border-right-width: var(--navbar-window-button-border-right-width);
   border-bottom-width: var(--navbar-window-button-border-bottom-width);
   border-left-width: var(--navbar-window-button-border-left-width);
+
   border-top-style: var(--navbar-window-button-border-top-style);
   border-right-style: var(--navbar-window-button-border-right-style);
   border-bottom-style: var(--navbar-window-button-border-bottom-style);
   border-left-style: var(--navbar-window-button-border-left-style);
+  
   border-top-color: var(--navbar-window-button-border-top-color);
   border-right-color: var(--navbar-window-button-border-right-color);
   border-bottom-color: var(--navbar-window-button-border-bottom-color);
@@ -88,7 +90,10 @@ body {
   border-left-color: var(--desktop-window-icon-border-left-color);
 }
 
-.theme-text-primary {
+.theme-text-primary-color {
   color: var(--text-primary-color);
+}
+
+.theme-text-font-family {
   font-family: var(--text-primary-font-family);
 }
