@@ -10,11 +10,9 @@ export default function ThemeButton({ onClick, children, isSelected }: Props) {
   return (
     <section
       onClick={onClick}
-      className="relative w-full p-1 cursor-pointer items-center hover:bg-zinc-700"
+      className={`relative w-full p-1 cursor-pointer items-center rounded-xl transition-all border-b-4 border-transparent ${isSelected && 'border-b-zinc-200/50 bg-zinc-600'}`}
     >
       <button className="w-full">{children}</button>
-
-      <span className={`${isSelected ? 'bg-red-500' : 'bg-none'} absolute top-0 right-0 h-2 w-2 rounded-full`}></span>
     </section>
   )
 }

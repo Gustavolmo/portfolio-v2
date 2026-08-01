@@ -8,6 +8,10 @@ body {
   user-select: none;
 }
 
+.custom-background-color {
+  background-color: var(--custom-background-color);
+}
+
 .theme-window {
   border-radius: var(--window-radius);
   background-color: var(--window-bg-color);

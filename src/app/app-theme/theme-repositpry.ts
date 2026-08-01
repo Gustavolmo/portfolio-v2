@@ -2,6 +2,7 @@ import { ThemeName, ThemeRepository } from './model.ts'
 
 export const themeRepository: Record<ThemeName, ThemeRepository> = {
   sysAdminDefault: {
+    '--custom-background-color' : 'none',
     '--window-radius': '2px',
     '--window-bg-color': 'white',
     '--window-border-color': '#52525b',
@@ -63,6 +64,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
   },
 
   blackhat: {
+    '--custom-background-color' : 'none',
     '--window-radius': '0',
     '--window-bg-color': 'rgb(0 8 4 / 0.92)',
     '--window-border-color': '#16a34a',
@@ -124,6 +126,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
   },
 
   retro: {
+    '--custom-background-color' : 'none',
     '--window-radius': '0',
     '--window-bg-color': '#f1f0e8',
     '--window-border-color': '#3f3f46',

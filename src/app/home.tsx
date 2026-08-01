@@ -10,7 +10,7 @@ import './bg-styles/blackhat-background.css'
 import './bg-styles/retro-background.css'
 import { useThemeStore } from './app-theme/theme-state.ts'
 import ProjectsWindowContent from './components/window-ui/projects/projects-window-content.tsx'
-import SettingsPannel from './components/nav-ui/settings-pannel.tsx'
+import SettingsWindowInnerHtml from './components/window-ui/settings/settings-window-inner-html.tsx'
 
 themeApi.initThemeFromMemory()
 
@@ -33,8 +33,8 @@ export default function Home() {
           <WindowView windowName="System" Window={serverStat.Window}>
             SYSTEM
           </WindowView>
-          <WindowView defaultDock='right' windowName="Settings" Window={settings.Window}>
-            <SettingsPannel />
+          <WindowView defaultDock="right" windowName="Settings" Window={settings.Window}>
+            <SettingsWindowInnerHtml />
           </WindowView>
 
           <section
