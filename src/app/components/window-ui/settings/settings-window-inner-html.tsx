@@ -204,6 +204,12 @@ function ThemeCustomization() {
             description="The background behind tabs within a window."
             value="#18181b"
           />
+          <ColorStyleControl
+            property="--window-navhandle-tabs-text-color"
+            label="Window tabs text color"
+            description="The color of each text in a tab."
+            value="#18181b"
+          />
         </div>
       </section>
 

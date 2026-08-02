@@ -26,6 +26,7 @@ body {
 
 .theme-window-navhandle-tabs {
   background-color: var(--window-navhandle-tabs-bg-color);
+  color: var(--window-navhandle-tabs-text-color)
 }
 
 .theme-navbar {

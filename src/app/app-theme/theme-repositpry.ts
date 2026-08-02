@@ -10,6 +10,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--window-border-thickness': '1px',
 
     '--window-navhandle-bg-color': '#262626',
+    '--window-navhandle-tabs-text-color': '#f4f4f5',
 
     '--navbar-bg-color': '#18181b',
     '--navbar-opacity': '100%',
@@ -72,6 +73,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--window-border-thickness': '1px',
 
     '--window-navhandle-bg-color': '#001b0c',
+    '--window-navhandle-tabs-text-color': '#86efac',
 
     '--navbar-bg-color': '#000804',
     '--navbar-opacity': '100%',
@@ -142,6 +144,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--navbar-tabs-gap': '0.375rem',
 
     '--window-navhandle-tabs-bg-color': '#eeeeee',
+    '--window-navhandle-tabs-text-color': 'black',
 
     '--navbar-window-button-bg': '#999999',
     '--navbar-window-button-color': '#18181b',

@@ -8,31 +8,31 @@ export default function ProjectsWindowContent() {
   const tabs = (
     <section className="absolute flex left-0 top-0 gap-4 p-2 w-full overflow-x-auto theme-window-navhandle-tabs">
       <button
-        className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'RWM' ? 'opacity-100' : 'opacity-50'}`}
+        className={`theme-text-font-family ${selectedTab === 'RWM' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('RWM')}
       >
         RWM
       </button>
       <button
-        className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'Allverk' ? 'opacity-100' : 'opacity-50'}`}
+        className={`theme-text-font-family ${selectedTab === 'Allverk' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('Allverk')}
       >
         Allverk
       </button>
       <button
-        className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'Bootlr' ? 'opacity-100' : 'opacity-50'}`}
+        className={`theme-text-font-family ${selectedTab === 'Bootlr' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('Bootlr')}
       >
         Bootlr
       </button>
       <button
-        className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'MangoMoji' ? 'opacity-100' : 'opacity-50'}`}
+        className={`theme-text-font-family ${selectedTab === 'MangoMoji' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('MangoMoji')}
       >
         MangoMoji
       </button>
       <button
-        className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'Scania' ? 'opacity-100' : 'opacity-50'}`}
+        className={`theme-text-font-family ${selectedTab === 'Scania' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('Scania')}
       >
         Scania
