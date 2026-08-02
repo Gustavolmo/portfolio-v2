@@ -9,7 +9,12 @@ import { SelectStyleControl } from './style-controls/select-style-control.tsx'
 export default function SettingsWindowInnerHtml() {
   return (
     <div className="p-4 theme-text-primary-color theme-text-font-family">
-      <button onClick={() => themeApi.logCurrentTheme()} className='bg-red-600 text-black'>LOG THEME</button>
+      {/* 
+      <button onClick={() => themeApi.logCurrentTheme()} className="bg-red-600 text-black">
+        FIND ME: REMOVE ME 
+        LOG THEME
+      </button>
+      */}
       <article className="overflow-hidden border border-zinc-400/10 bg-zinc-900/10">
         <header className="flex items-start gap-3 border-b border-zinc-400/10 px-5 py-4 sm:px-6">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-opacity-70">
@@ -36,7 +41,6 @@ export default function SettingsWindowInnerHtml() {
           </section>
         </div>
       </article>
-
       <article className="overflow-hidden border border-zinc-400/10 bg-zinc-900/10 mt-8">
         <div className="flex flex-col gap-8 p-5">
           <section>
@@ -294,16 +298,6 @@ function ThemeCustomization() {
             value={0.75}
             min={0.5}
             max={2}
-            step={0.05}
-            unit="rem"
-          />
-          <NumberStyleControl
-            property="--navbar-window-button-line-height"
-            label="Label line height"
-            description="Adjust vertical spacing inside button labels."
-            value={1}
-            min={0.75}
-            max={3}
             step={0.05}
             unit="rem"
           />

@@ -75,7 +75,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
 
     '--navbar-bg-color': '#000804',
     '--navbar-opacity': '100%',
-    '--navbar-justify': 'center',
+    '--navbar-justify': 'end',
     '--navbar-tabs-gap': '0px',
 
     '--window-navhandle-tabs-bg-color': '#001407',
@@ -138,7 +138,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
 
     '--navbar-bg-color': '#dddddd',
     '--navbar-opacity': '100%',
-    '--navbar-justify': 'end',
+    '--navbar-justify': 'space-between',
     '--navbar-tabs-gap': '0.375rem',
 
     '--window-navhandle-tabs-bg-color': '#b8b6ad',
