@@ -108,6 +108,23 @@ function ThemeSelection() {
           </div>
         </div>
       </ThemeButton>
+      <ThemeButton
+        isSelected={selectedTheme === 'brutalist'}
+        onClick={() => themeApi.setTheme('brutalist', 'brutalist-desktop-background')}
+      >
+        <div className="group flex min-h-32 w-full flex-col justify-between rounded-xl border-2 border-black bg-[#d2a516] p-4 text-left transition-transform hover:-rotate-1">
+          <div className="flex items-center justify-between">
+            <Palette size={18} className="text-black" />
+            <span className="border-2 border-black bg-white px-2 pt-1 pb-0.5 text-[10px] font-medium uppercase tracking-wider text-black">
+              Bold
+            </span>
+          </div>
+          <div>
+            <p className="text-sm font-black uppercase text-black">Brutalist</p>
+            <p className="mt-1 text-xs text-black/70">Blocky and off-kilter</p>
+          </div>
+        </div>
+      </ThemeButton>
     </article>
   )
 }
