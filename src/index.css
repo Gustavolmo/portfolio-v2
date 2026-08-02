@@ -56,7 +56,7 @@ body {
   border-right-style: var(--navbar-window-button-border-right-style);
   border-bottom-style: var(--navbar-window-button-border-bottom-style);
   border-left-style: var(--navbar-window-button-border-left-style);
-  
+
   border-top-color: var(--navbar-window-button-border-top-color);
   border-right-color: var(--navbar-window-button-border-right-color);
   border-bottom-color: var(--navbar-window-button-border-bottom-color);
@@ -92,6 +92,38 @@ body {
 
 .theme-text-primary-color {
   color: var(--text-primary-color);
+}
+
+.theme-text-primary-color .text-opacity-90 {
+  color: color-mix(in srgb, var(--text-primary-color) 90%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-75 {
+  color: color-mix(in srgb, var(--text-primary-color) 75%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-70 {
+  color: color-mix(in srgb, var(--text-primary-color) 70%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-60 {
+  color: color-mix(in srgb, var(--text-primary-color) 60%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-55 {
+  color: color-mix(in srgb, var(--text-primary-color) 55%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-50 {
+  color: color-mix(in srgb, var(--text-primary-color) 50%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-45 {
+  color: color-mix(in srgb, var(--text-primary-color) 45%, transparent);
+}
+
+.theme-text-primary-color .placeholder-text-opacity-45::placeholder {
+  color: color-mix(in srgb, var(--text-primary-color) 45%, transparent);
 }
 
 .theme-text-font-family {

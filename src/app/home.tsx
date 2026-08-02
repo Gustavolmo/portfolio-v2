@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </WorkspaceLayout>
 
-      <nav className="w-full h-12 theme-navbar flex px-4 items-center z-50">
+      <nav className="w-full h-12 theme-navbar flex px-4 gap-2 items-center z-50">
         <section className="flex w-fit overflow-x-auto theme-navbar-tabs">
           <WindowNavButton title="Profile" Button={profile.Button} />
           <WindowNavButton title="Projects" Button={projects.Button} />

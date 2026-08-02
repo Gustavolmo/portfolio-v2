@@ -2,9 +2,9 @@ import { ThemeName, ThemeRepository } from './model.ts'
 
 export const themeRepository: Record<ThemeName, ThemeRepository> = {
   sysAdminDefault: {
-    '--custom-background-color' : 'none',
+    '--custom-background-color': 'none',
     '--window-radius': '2px',
-    '--window-bg-color': '#888888',
+    '--window-bg-color': '#111111',
     '--window-border-color': '#52525b',
     '--window-border-style': 'solid',
     '--window-border-thickness': '1px',
@@ -64,7 +64,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
   },
 
   blackhat: {
-    '--custom-background-color' : 'none',
+    '--custom-background-color': 'none',
     '--window-radius': '0',
     '--window-bg-color': 'rgb(0 8 4 / 0.92)',
     '--window-border-color': '#16a34a',
@@ -75,7 +75,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
 
     '--navbar-bg-color': '#000804',
     '--navbar-opacity': '100%',
-    '--navbar-justify': 'space-between',
+    '--navbar-justify': 'center',
     '--navbar-tabs-gap': '0px',
 
     '--window-navhandle-tabs-bg-color': '#001407',
@@ -126,9 +126,9 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
   },
 
   retro: {
-    '--custom-background-color' : 'none',
+    '--custom-background-color': 'none',
     '--window-radius': '0',
-    '--window-bg-color': '#f1f0e8',
+    '--window-bg-color': '#fffef5',
     '--window-border-color': '#3f3f46',
     '--window-border-style': 'solid',
     '--window-border-thickness': '2px',
@@ -138,12 +138,12 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
 
     '--navbar-bg-color': '#dddddd',
     '--navbar-opacity': '100%',
-    '--navbar-justify': 'space-between',
+    '--navbar-justify': 'end',
     '--navbar-tabs-gap': '0.375rem',
 
     '--window-navhandle-tabs-bg-color': '#b8b6ad',
 
-    '--navbar-window-button-bg': '#777777',
+    '--navbar-window-button-bg': '#999999',
     '--navbar-window-button-color': '#18181b',
     '--navbar-window-button-font-size': '0.75rem',
     '--navbar-window-button-line-height': '1rem',
@@ -183,7 +183,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--desktop-window-icon-border-bottom-color': '#44403c',
     '--desktop-window-icon-border-left-color': '#ffffff',
 
-    '--text-primary-color': '#18181b',
+    '--text-primary-color': 'black',
     '--text-primary-font-family': '"Trebuchet MS", "Tahoma", "Verdana", Arial, sans-serif',
   },
 } as const

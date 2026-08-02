@@ -38,14 +38,14 @@ export function NumberStyleControl({
 
   return (
     <CssPropertyControlShell>
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-zinc-400">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-opacity-60">
         <Hash size={16} />
       </div>
       <CssPropertyControlLabel label={label} description={description} />
       <div className="ml-auto flex w-28 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-black/20 focus-within:border-white/25">
         <input
           aria-label={label}
-          className="min-w-0 flex-1 bg-transparent px-2 py-2 text-right text-sm text-zinc-100 outline-none"
+          className="min-w-0 flex-1 bg-transparent px-2 py-2 text-right text-sm text-opacity-70 outline-none"
           type="number"
           value={number}
           min={min}
@@ -54,7 +54,7 @@ export function NumberStyleControl({
           onChange={updateNumber}
         />
         {unit && (
-          <span className="flex items-center border-l border-white/10 px-2 text-xs text-zinc-500">
+          <span className="flex items-center border-l border-white/10 px-2 text-xs text-opacity-45">
             {unit}
           </span>
         )}

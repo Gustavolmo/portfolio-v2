@@ -17,25 +17,25 @@ export default function ProjectsWindowContent() {
         className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'Allverk' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('Allverk')}
       >
-        <p className="text-opacity-50">Allverk</p>
+        Allverk
       </button>
       <button
         className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'Bootlr' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('Bootlr')}
       >
-        <p className="text-opacity-50">Bootlr</p>
+        Bootlr
       </button>
       <button
         className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'MangoMoji' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('MangoMoji')}
       >
-        <p className="text-opacity-50">MangoMoji</p>
+        MangoMoji
       </button>
       <button
         className={`theme-text-primary-color theme-text-font-family ${selectedTab === 'Scania' ? 'opacity-100' : 'opacity-50'}`}
         onClick={() => setSelectedTab('Scania')}
       >
-        <p className="text-opacity-50">Scania</p>
+        Scania
       </button>
     </section>
   )

@@ -5,19 +5,18 @@ import ThemeButton from './theme-button.tsx'
 import { ColorStyleControl } from './style-controls/color-style-control.tsx'
 import { NumberStyleControl } from './style-controls/number-style-control.tsx'
 import { SelectStyleControl } from './style-controls/select-style-control.tsx'
-import { TextStyleControl } from './style-controls/text-style-control.tsx'
 
 export default function SettingsWindowInnerHtml() {
   return (
     <div className="p-4 theme-text-primary-color theme-text-font-family">
-      <article className="overflow-hidden border border-white/10 bg-zinc-900/90 shadow-2xl shadow-black/20 backdrop-blur-sm">
-        <header className="flex items-start gap-3 border-b border-white/10 px-5 py-4 sm:px-6">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-zinc-100">
+      <article className="overflow-hidden border border-zinc-400/10 bg-zinc-900/10">
+        <header className="flex items-start gap-3 border-b border-zinc-400/10 px-5 py-4 sm:px-6">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-opacity-70">
             <Palette size={19} strokeWidth={1.8} />
           </div>
           <div>
-            <h2 className="font-medium text-zinc-50">Appearance</h2>
-            <p className="mt-0.5 text-sm text-zinc-400">
+            <h2 className="font-medium text-opacity-90">Appearance</h2>
+            <p className="mt-0.5 text-sm text-opacity-55">
               Personalize the look and feel of your workspace.
             </p>
           </div>
@@ -26,10 +25,10 @@ export default function SettingsWindowInnerHtml() {
         <div className="flex flex-col gap-8 p-5">
           <section>
             <div className="mb-3 flex items-center gap-2">
-              <Sparkles size={15} className="text-zinc-400" />
+              <Sparkles size={15} className="text-opacity-90" />
               <div>
-                <h3 className="text-sm font-medium text-zinc-100">Theme</h3>
-                <p className="text-xs text-zinc-500">Choose a visual style for your desktop.</p>
+                <h3 className="text-sm font-medium text-opacity-75">Theme</h3>
+                <p className="text-xs text-opacity-50">Choose a visual style for your desktop.</p>
               </div>
             </div>
             <ThemeSelection />
@@ -37,14 +36,14 @@ export default function SettingsWindowInnerHtml() {
         </div>
       </article>
 
-      <article className="overflow-hidden border border-white/10 bg-zinc-900/90 shadow-2xl shadow-black/20 backdrop-blur-sm mt-8">
+      <article className="overflow-hidden border border-zinc-400/10 bg-zinc-900/10 mt-8">
         <div className="flex flex-col gap-8 p-5">
           <section>
             <div className="mb-3 flex items-center gap-2">
-              <Palette size={15} className="text-zinc-400" />
+              <Palette size={15} className="text-opacity-90" />
               <div>
-                <h3 className="text-sm font-medium text-zinc-100">Customize</h3>
-                <p className="text-xs text-zinc-500">More controls are on their way.</p>
+                <h3 className="text-sm font-medium text-opacity-75">Customize</h3>
+                <p className="text-xs text-opacity-50">Fine-tune every part of your interface.</p>
               </div>
             </div>
             <ThemeCustomization />
@@ -63,7 +62,7 @@ function ThemeSelection() {
         isSelected={selectedTheme === 'sysAdminDefault'}
         onClick={() => themeApi.setTheme('sysAdminDefault', 'dark-rays-desktop-background')}
       >
-        <div className="group flex min-h-32 w-full flex-col justify-between rounded-xl border border-white/10 bg-zinc-950 p-4 text-left transition-colors hover:border-white/25">
+        <div className="group flex min-h-32 w-full flex-col justify-between rounded-xl border border-zinc-600 bg-zinc-950 p-4 text-left transition-colors hover:border-white/25">
           <div className="flex items-center justify-between">
             <Monitor size={18} className="text-zinc-300" />
             <span className="rounded-full bg-white/10 px-2  pt-1 pb-0.5 text-[10px] font-medium uppercase tracking-wider text-zinc-400">
@@ -119,10 +118,10 @@ function ThemeCustomization() {
     <article className="flex flex-col gap-6">
       <section>
         <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
             Desktop & windows
           </h4>
-          <p className="mt-1 text-xs text-zinc-600">
+          <p className="mt-1 text-xs text-opacity-45">
             Shape the workspace and every application window.
           </p>
         </div>
@@ -180,10 +179,10 @@ function ThemeCustomization() {
 
       <section>
         <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
             Window title bars
           </h4>
-          <p className="mt-1 text-xs text-zinc-600">
+          <p className="mt-1 text-xs text-opacity-45">
             Customize the handle and project tabs inside each window.
           </p>
         </div>
@@ -211,10 +210,10 @@ function ThemeCustomization() {
 
       <section>
         <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
             Navigation bar
           </h4>
-          <p className="mt-1 text-xs text-zinc-600">
+          <p className="mt-1 text-xs text-opacity-45">
             Control the dock at the bottom of your workspace.
           </p>
         </div>
@@ -267,10 +266,10 @@ function ThemeCustomization() {
 
       <section>
         <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
             Navigation buttons
           </h4>
-          <p className="mt-1 text-xs text-zinc-600">
+          <p className="mt-1 text-xs text-opacity-45">
             Tune the buttons used to open and switch between windows.
           </p>
         </div>
@@ -340,10 +339,10 @@ function ThemeCustomization() {
 
       <section>
         <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
             Navigation button borders
           </h4>
-          <p className="mt-1 text-xs text-zinc-600">
+          <p className="mt-1 text-xs text-opacity-45">
             Each edge is independent for precise retro and terminal-style treatments.
           </p>
         </div>
@@ -449,10 +448,10 @@ function ThemeCustomization() {
 
       <section>
         <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
             Desktop icons
           </h4>
-          <p className="mt-1 text-xs text-zinc-600">
+          <p className="mt-1 text-xs text-opacity-45">
             Style the launchers displayed across the desktop.
           </p>
         </div>
@@ -463,12 +462,14 @@ function ThemeCustomization() {
             description="The foreground color used by desktop launchers."
             value="#f4f4f5"
           />
-          <TextStyleControl
+          <NumberStyleControl
             property="--desktop-window-icon-width"
             label="Desktop icon width"
             description="Enter a CSS width, such as fit-content or 10rem."
-            value="fit-content"
-            placeholder="e.g. fit-content"
+            value={32}
+            min={32}
+            max={200}
+            step={1}
           />
           <NumberStyleControl
             property="--desktop-window-icon-padding"
@@ -500,10 +501,10 @@ function ThemeCustomization() {
 
       <section>
         <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
             Desktop icon borders
           </h4>
-          <p className="mt-1 text-xs text-zinc-600">
+          <p className="mt-1 text-xs text-opacity-45">
             Give each launcher its own beveled, outlined, or borderless edge.
           </p>
         </div>
@@ -609,8 +610,10 @@ function ThemeCustomization() {
 
       <section>
         <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-zinc-500">Typography</h4>
-          <p className="mt-1 text-xs text-zinc-600">
+          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
+            Typography
+          </h4>
+          <p className="mt-1 text-xs text-opacity-45">
             Set the primary type treatment used throughout the interface.
           </p>
         </div>

@@ -26,7 +26,7 @@ export function ColorStyleControl({ property, label, description, value }: Props
 
   return (
     <CssPropertyControlShell>
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-zinc-400">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-opacity-60">
         <Palette size={16} />
       </div>
       <CssPropertyControlLabel label={label} description={description} />

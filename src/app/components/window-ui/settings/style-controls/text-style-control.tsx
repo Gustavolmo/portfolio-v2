@@ -30,13 +30,13 @@ export function TextStyleControl({
 
   return (
     <CssPropertyControlShell>
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-zinc-400">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-opacity-60">
         <Braces size={16} />
       </div>
       <CssPropertyControlLabel label={label} description={description} />
       <input
         aria-label={label}
-        className="ml-auto w-40 shrink-0 rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-sm text-zinc-200 outline-none transition-colors placeholder:text-zinc-600 hover:border-white/20 focus:border-white/30"
+        className="ml-auto w-40 shrink-0 rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-sm text-opacity-70 outline-none transition-colors placeholder-text-opacity-45 hover:border-white/20 focus:border-white/30"
         type="text"
         value={text}
         placeholder={placeholder}
