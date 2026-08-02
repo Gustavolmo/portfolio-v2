@@ -606,7 +606,7 @@ function ThemeCustomization() {
           <ColorStyleControl
             property="--text-primary-color"
             label="Primary text"
-            description="The main text color across the interface."
+            description="Text color applied to content inside a window."
             value="#f4f4f5"
           />
           <SelectStyleControl

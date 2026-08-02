@@ -19,7 +19,7 @@ export default function WindowDesktopButton({ title, Button, Icon }: Prop) {
       >
         <Icon className="h-10 w-10 theme-text-font-family min-w-8" />
       </Button>
-      <p className="text-sm theme-text-primary-color theme-text-font-family mt-0.5">{title}</p>
+      <p className="text-sm theme-desktop-window-icon-text-color theme-text-font-family mt-0.5">{title}</p>
     </div>
   )
 }
