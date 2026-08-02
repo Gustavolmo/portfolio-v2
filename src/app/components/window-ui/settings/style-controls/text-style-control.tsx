@@ -30,7 +30,7 @@ export function TextStyleControl({
 
   return (
     <CssPropertyControlShell>
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-opacity-60">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-zinc-500/10 text-opacity-60">
         <Braces size={16} />
       </div>
       <CssPropertyControlLabel label={label} description={description} />

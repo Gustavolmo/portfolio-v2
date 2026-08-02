@@ -29,6 +29,18 @@ export const themeApi = {
     const themeName = memoryApi.getSavedThemeName()
     if (themeName) useThemeStore.setState({ selectedTheme: themeName })
   },
+
+  logCurrentTheme: () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const currentTheme: any = {}
+
+    Object.entries(themeRepository.sysAdminDefault).forEach(([property, defaultValue]) => {
+      const styleValue = memoryApi.getSavedStyleProp(property as ThemeProperty) ?? defaultValue
+      currentTheme[property] = styleValue
+    })
+
+    console.log(currentTheme)
+  },
 }
 
 export const cssPropertyApi = {

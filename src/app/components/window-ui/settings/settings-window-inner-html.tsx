@@ -9,6 +9,7 @@ import { SelectStyleControl } from './style-controls/select-style-control.tsx'
 export default function SettingsWindowInnerHtml() {
   return (
     <div className="p-4 theme-text-primary-color theme-text-font-family">
+      <button onClick={() => themeApi.logCurrentTheme()} className='bg-red-600 text-black'>LOG THEME</button>
       <article className="overflow-hidden border border-zinc-400/10 bg-zinc-900/10">
         <header className="flex items-start gap-3 border-b border-zinc-400/10 px-5 py-4 sm:px-6">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-opacity-70">
