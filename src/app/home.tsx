@@ -11,6 +11,7 @@ import './bg-styles/retro-background.css'
 import { useThemeStore } from './app-theme/theme-state.ts'
 import ProjectsWindowContent from './components/window-ui/projects/projects-window-content.tsx'
 import SettingsWindowInnerHtml from './components/window-ui/settings/settings-window-inner-html.tsx'
+import ProfileWindowContent from './components/window-ui/profile/profile-window-content.tsx'
 
 themeApi.initThemeFromMemory()
 
@@ -22,7 +23,7 @@ export default function Home() {
       <WorkspaceLayout className="h-full w-full grow">
         <div className={`p-8 md:p-16 w-full h-full ${selectedBackground} mb-12`}>
           <WindowView windowName="Profile" Window={profile.Window}>
-            PROFILE
+            <ProfileWindowContent />
           </WindowView>
           <WindowView windowName="Projects" Window={projects.Window}>
             <ProjectsWindowContent />
