@@ -33,11 +33,13 @@ export function SelectStyleControl({
 
   return (
     <CssPropertyControlShell>
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-zinc-500/10 text-opacity-60">
-        <ChevronDown size={16} />
-      </div>
-      <CssPropertyControlLabel label={label} description={description} />
-      <div className="relative ml-auto w-36 shrink-0">
+      <section className="flex gap-2 items-center w-full">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-zinc-500/10 text-opacity-60">
+          <ChevronDown size={16} />
+        </div>
+        <CssPropertyControlLabel label={label} description={description} />
+      </section>
+      <div className="relative max-w-96 w-full shrink-0">
         <select
           aria-label={label}
           className="w-full appearance-none rounded-lg border border-white/10 bg-black/20 px-3 py-2 pr-8 text-sm text-opacity-70 outline-none transition-colors hover:border-white/20 focus:border-white/30"
@@ -45,7 +47,7 @@ export function SelectStyleControl({
           onChange={updateSelect}
         >
           {options.map((option) => (
-            <option className="text-opacity-70" key={option.value} value={option.value}>
+            <option className="text-zinc-800" key={option.value} value={option.value}>
               {option.label}
             </option>
           ))}

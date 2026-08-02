@@ -15,9 +15,9 @@ export default function WindowDesktopButton({ title, Button, Icon }: Prop) {
         isOpenClassName="brightness-150"
         isActiveClassName="brightness-150"
         isClosedClassName="brightness-100"
-        className="theme-desktop-window-icon"
+        className="theme-desktop-window-icon flex justify-center"
       >
-        <Icon className="h-10 w-10 theme-text-font-family mx-auto" />
+        <Icon className="h-10 w-10 theme-text-font-family min-w-8" />
       </Button>
       <p className="text-sm theme-text-primary-color theme-text-font-family mt-0.5">{title}</p>
     </div>

@@ -9,12 +9,6 @@ import { SelectStyleControl } from './style-controls/select-style-control.tsx'
 export default function SettingsWindowInnerHtml() {
   return (
     <div className="p-4 theme-text-primary-color theme-text-font-family">
-      {/* 
-      <button onClick={() => themeApi.logCurrentTheme()} className="bg-red-600 text-black">
-        FIND ME: REMOVE ME 
-        LOG THEME
-      </button>
-      */}
       <article className="overflow-hidden border border-zinc-400/10 bg-zinc-900/10">
         <header className="flex items-start gap-3 border-b border-zinc-400/10 px-5 py-4 sm:px-6">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-opacity-70">
@@ -48,7 +42,7 @@ export default function SettingsWindowInnerHtml() {
               <Palette size={15} className="text-opacity-90" />
               <div>
                 <h3 className="text-sm font-medium text-opacity-75">Customize</h3>
-                <p className="text-xs text-opacity-50">Fine-tune every part of your interface.</p>
+                <p className="text-xs text-opacity-50">Fine-tune your interface.</p>
               </div>
             </div>
             <ThemeCustomization />
@@ -130,7 +124,7 @@ function ThemeCustomization() {
             Shape the workspace and every application window.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 [&>div]:min-w-72 [&>div]:flex-1">
+        <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--custom-background-color"
             label="Desktop background"
@@ -139,14 +133,14 @@ function ThemeCustomization() {
           />
           <ColorStyleControl
             property="--window-bg-color"
-            label="Window surface"
-            description="The base color of application windows."
+            label="Window background"
+            description="The background color of the window."
             value="#ffffff"
           />
           <ColorStyleControl
             property="--window-border-color"
             label="Window border"
-            description="A subtle edge around each window."
+            description="The edge around each window."
             value="#52525b"
           />
           <NumberStyleControl
@@ -155,7 +149,7 @@ function ThemeCustomization() {
             description="Round the corners of every window."
             value={2}
             min={0}
-            max={32}
+            max={20}
             unit="px"
           />
           <NumberStyleControl
@@ -164,7 +158,7 @@ function ThemeCustomization() {
             description="Set the width of window borders."
             value={1}
             min={0}
-            max={8}
+            max={32}
             unit="px"
           />
           <SelectStyleControl
@@ -188,10 +182,10 @@ function ThemeCustomization() {
             Window title bars
           </h4>
           <p className="mt-1 text-xs text-opacity-45">
-            Customize the handle and project tabs inside each window.
+            Customize the handle and tabs inside each window.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 [&>div]:min-w-72 [&>div]:flex-1">
+        <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--window-navhandle-bg-color"
             label="Title bar background"
@@ -219,25 +213,15 @@ function ThemeCustomization() {
             Navigation bar
           </h4>
           <p className="mt-1 text-xs text-opacity-45">
-            Control the dock at the bottom of your workspace.
+            Control the navbar at the bottom of your workspace.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 [&>div]:min-w-72 [&>div]:flex-1">
+        <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--navbar-bg-color"
             label="Navigation background"
             description="Set the background color of the navigation bar."
             value="#18181b"
-          />
-          <NumberStyleControl
-            property="--navbar-opacity"
-            label="Navigation opacity"
-            description="Control how transparent the navigation bar is."
-            value={100}
-            min={0}
-            max={100}
-            step={5}
-            unit="%"
           />
           <SelectStyleControl
             property="--navbar-justify"
@@ -257,7 +241,7 @@ function ThemeCustomization() {
             description="Add space between navigation tabs."
             value={0}
             min={0}
-            max={32}
+            max={64}
             unit="px"
           />
           <ColorStyleControl
@@ -275,10 +259,10 @@ function ThemeCustomization() {
             Navigation buttons
           </h4>
           <p className="mt-1 text-xs text-opacity-45">
-            Tune the buttons used to open and switch between windows.
+            Tune the navbar buttons used to open and switch between windows.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 [&>div]:min-w-72 [&>div]:flex-1">
+        <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--navbar-window-button-bg"
             label="Button background"
@@ -306,7 +290,7 @@ function ThemeCustomization() {
             label="Button height"
             description="Set the height of each navigation button."
             value={2.25}
-            min={1.5}
+            min={1.25}
             max={5}
             step={0.25}
             unit="rem"
@@ -326,7 +310,7 @@ function ThemeCustomization() {
             description="Round navigation button corners."
             value={0}
             min={0}
-            max={24}
+            max={36}
             unit="px"
           />
         </div>
@@ -338,13 +322,37 @@ function ThemeCustomization() {
             Navigation button borders
           </h4>
           <p className="mt-1 text-xs text-opacity-45">
-            Each edge is independent for precise retro and terminal-style treatments.
+            Each edge is independent for precise treatments.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 [&>div]:min-w-72 [&>div]:flex-1">
+        <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <NumberStyleControl
             property="--navbar-window-button-border-top-width"
             label="Top border width"
+            value={0}
+            min={0}
+            max={8}
+            unit="px"
+          />
+          <NumberStyleControl
+            property="--navbar-window-button-border-right-width"
+            label="Right border width"
+            value={0}
+            min={0}
+            max={8}
+            unit="px"
+          />
+          <NumberStyleControl
+            property="--navbar-window-button-border-bottom-width"
+            label="Bottom border width"
+            value={0}
+            min={0}
+            max={8}
+            unit="px"
+          />
+          <NumberStyleControl
+            property="--navbar-window-button-border-left-width"
+            label="Left border width"
             value={0}
             min={0}
             max={8}
@@ -361,19 +369,6 @@ function ThemeCustomization() {
               { label: 'Double', value: 'double' },
             ]}
           />
-          <ColorStyleControl
-            property="--navbar-window-button-border-top-color"
-            label="Top border color"
-            value="#18181b"
-          />
-          <NumberStyleControl
-            property="--navbar-window-button-border-right-width"
-            label="Right border width"
-            value={0}
-            min={0}
-            max={8}
-            unit="px"
-          />
           <SelectStyleControl
             property="--navbar-window-button-border-right-style"
             label="Right border style"
@@ -384,19 +379,6 @@ function ThemeCustomization() {
               { label: 'Dotted', value: 'dotted' },
               { label: 'Double', value: 'double' },
             ]}
-          />
-          <ColorStyleControl
-            property="--navbar-window-button-border-right-color"
-            label="Right border color"
-            value="#18181b"
-          />
-          <NumberStyleControl
-            property="--navbar-window-button-border-bottom-width"
-            label="Bottom border width"
-            value={0}
-            min={0}
-            max={8}
-            unit="px"
           />
           <SelectStyleControl
             property="--navbar-window-button-border-bottom-style"
@@ -409,19 +391,6 @@ function ThemeCustomization() {
               { label: 'Double', value: 'double' },
             ]}
           />
-          <ColorStyleControl
-            property="--navbar-window-button-border-bottom-color"
-            label="Bottom border color"
-            value="#18181b"
-          />
-          <NumberStyleControl
-            property="--navbar-window-button-border-left-width"
-            label="Left border width"
-            value={0}
-            min={0}
-            max={8}
-            unit="px"
-          />
           <SelectStyleControl
             property="--navbar-window-button-border-left-style"
             label="Left border style"
@@ -432,6 +401,21 @@ function ThemeCustomization() {
               { label: 'Dotted', value: 'dotted' },
               { label: 'Double', value: 'double' },
             ]}
+          />
+          <ColorStyleControl
+            property="--navbar-window-button-border-top-color"
+            label="Top border color"
+            value="#18181b"
+          />
+          <ColorStyleControl
+            property="--navbar-window-button-border-right-color"
+            label="Right border color"
+            value="#18181b"
+          />
+          <ColorStyleControl
+            property="--navbar-window-button-border-bottom-color"
+            label="Bottom border color"
+            value="#18181b"
           />
           <ColorStyleControl
             property="--navbar-window-button-border-left-color"
@@ -450,7 +434,7 @@ function ThemeCustomization() {
             Style the launchers displayed across the desktop.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 [&>div]:min-w-72 [&>div]:flex-1">
+        <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--desktop-window-icon-color"
             label="Icon color"
@@ -460,7 +444,7 @@ function ThemeCustomization() {
           <NumberStyleControl
             property="--desktop-window-icon-width"
             label="Desktop icon width"
-            description="Enter a CSS width, such as fit-content or 10rem."
+            description="Adjust the width."
             value={32}
             min={32}
             max={200}
@@ -482,7 +466,7 @@ function ThemeCustomization() {
             description="Round the desktop launcher corners."
             value={0}
             min={0}
-            max={32}
+            max={128}
             unit="px"
           />
           <ColorStyleControl
@@ -503,7 +487,7 @@ function ThemeCustomization() {
             Give each launcher its own beveled, outlined, or borderless edge.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 [&>div]:min-w-72 [&>div]:flex-1">
+        <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <NumberStyleControl
             property="--desktop-window-icon-border-top-width"
             label="Top border width"
@@ -612,7 +596,7 @@ function ThemeCustomization() {
             Set the primary type treatment used throughout the interface.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 [&>div]:min-w-72 [&>div]:flex-1">
+        <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--text-primary-color"
             label="Primary text"

@@ -26,12 +26,14 @@ export function ColorStyleControl({ property, label, description, value }: Props
 
   return (
     <CssPropertyControlShell>
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-zinc-500/10 text-opacity-60">
-        <Palette size={16} />
-      </div>
-      <CssPropertyControlLabel label={label} description={description} />
+      <section className="flex gap-2 items-center w-full">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-zinc-500/10 text-opacity-60">
+          <Palette size={16} />
+        </div>
+        <CssPropertyControlLabel label={label} description={description} />
+      </section>
       <label
-        className="relative ml-auto h-9 w-14 shrink-0 cursor-pointer overflow-hidden rounded-lg border border-white/15"
+        className="relative max-w-96 h-9 w-full shrink-0 cursor-pointer overflow-hidden rounded-lg border border-white/15"
         style={{ backgroundColor: color }}
       >
         <input

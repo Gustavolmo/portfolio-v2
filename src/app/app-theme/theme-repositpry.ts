@@ -133,7 +133,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--window-border-style': 'solid',
     '--window-border-thickness': '2px',
 
-    '--window-navhandle-bg-color': '#777777',
+    '--window-navhandle-bg-color': '#888888',
     '--window-navhandle-title-color': '#18181b',
 
     '--navbar-bg-color': '#dddddd',
@@ -141,7 +141,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--navbar-justify': 'space-between',
     '--navbar-tabs-gap': '0.375rem',
 
-    '--window-navhandle-tabs-bg-color': '#b8b6ad',
+    '--window-navhandle-tabs-bg-color': '#eeeeee',
 
     '--navbar-window-button-bg': '#999999',
     '--navbar-window-button-color': '#18181b',

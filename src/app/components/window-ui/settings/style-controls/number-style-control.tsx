@@ -38,15 +38,18 @@ export function NumberStyleControl({
 
   return (
     <CssPropertyControlShell>
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-zinc-500/10 text-opacity-60">
-        <Hash size={16} />
-      </div>
-      <CssPropertyControlLabel label={label} description={description} />
-      <div className="ml-auto flex w-28 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-black/20 focus-within:border-white/25">
+      <section className="flex gap-2 items-center w-full">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-zinc-500/10 text-opacity-60">
+          <Hash size={16} />
+        </div>
+
+        <CssPropertyControlLabel label={label} description={description} />
+      </section>
+      <div className="flex w-full max-w-96 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-black/20 focus-within:border-white/25">
         <input
           aria-label={label}
-          className="min-w-0 flex-1 bg-transparent px-2 py-2 text-right text-sm text-opacity-70 outline-none"
-          type="number"
+          className="min-w-0 flex-1 bg-transparent mx-2 py-2 text-right text-sm text-opacity-70 outline-none"
+          type="range"
           value={number}
           min={min}
           max={max}
@@ -55,7 +58,7 @@ export function NumberStyleControl({
         />
         {unit && (
           <span className="flex items-center border-l border-white/10 px-2 text-xs text-opacity-45">
-            {unit}
+            {unit === 'rem' ? number.toFixed(2) : number} {unit}
           </span>
         )}
       </div>
