@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { projects } from './project-data-repositpry.ts'
+import ProjectShowcase from './project-showcase.tsx'
 
-export default function ProjectsWindowContent() {
+export default function ProjectWindowContent() {
   const [selectedTab, setSelectedTab] = useState<
     'RWM' | 'Scania' | 'Allverk' | 'Bootlr' | 'MangoMoji'
   >('RWM')
@@ -43,7 +45,7 @@ export default function ProjectsWindowContent() {
   return (
     <div className="h-full w-full relative p-1 pt-12">
       {tabs}
-      {selectedTab === 'RWM' && <p>RWM</p>}
+      {selectedTab === 'RWM' && <ProjectShowcase project={projects.reactWindowManager} />}
       {selectedTab === 'Scania' && <p>Scania</p>}
       {selectedTab === 'Allverk' && <p>Allverk</p>}
       {selectedTab === 'Bootlr' && <p>Bootlr</p>}

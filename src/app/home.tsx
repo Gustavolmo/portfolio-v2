@@ -10,7 +10,7 @@ import './bg-styles/blackhat-background.css'
 import './bg-styles/retro-background.css'
 import './bg-styles/brutalist-background.css'
 import { useThemeStore } from './app-theme/theme-state.ts'
-import ProjectsWindowContent from './components/window-ui/projects/projects-window-content.tsx'
+import ProjectWindowContent from './components/window-ui/projects/project-window-content.tsx'
 import SettingsWindowInnerHtml from './components/window-ui/settings/settings-window-inner-html.tsx'
 import ProfileWindowContent from './components/window-ui/profile/profile-window-content.tsx'
 
@@ -27,7 +27,7 @@ export default function Home() {
             <ProfileWindowContent />
           </WindowView>
           <WindowView windowName="Projects" Window={projects.Window}>
-            <ProjectsWindowContent />
+            <ProjectWindowContent />
           </WindowView>
           <WindowView windowName="Email" Window={email.Window}>
             EMAIL
