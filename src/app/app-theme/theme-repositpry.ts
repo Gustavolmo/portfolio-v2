@@ -190,10 +190,10 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--text-primary-font-family': '"Trebuchet MS", "Tahoma", "Verdana", Arial, sans-serif',
   },
 
-  brutalist: {
+  whiteboard: {
     '--custom-background-color': 'none',
     '--window-radius': '2px 12px 4px 9px',
-    '--window-bg-color': '#ffea00',
+    '--window-bg-color': '#e8e3c5',
     '--window-border-color': '#050505',
     '--window-border-style': 'solid',
     '--window-border-thickness': '3px',

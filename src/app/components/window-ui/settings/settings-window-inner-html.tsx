@@ -1,6 +1,6 @@
 import { themeApi } from '../../../app-theme/theme-api.ts'
 import { useThemeStore } from '../../../app-theme/theme-state.ts'
-import { Clock3, Monitor, Palette, Shield, SwatchBook } from 'lucide-react'
+import { Clock3, Monitor, Presentation, Shield, SwatchBook } from 'lucide-react'
 import ThemeButton from './theme-button.tsx'
 import { ColorStyleControl } from './style-controls/color-style-control.tsx'
 import { NumberStyleControl } from './style-controls/number-style-control.tsx'
@@ -58,7 +58,7 @@ function ThemeSelection() {
         isSelected={selectedTheme === 'sysAdminDefault'}
         onClick={() => themeApi.setTheme('sysAdminDefault', 'dark-rays-desktop-background')}
       >
-        <div className="group flex min-h-32 w-full flex-col justify-between rounded-xl border border-zinc-600 bg-zinc-950 p-4 text-left transition-colors hover:border-white/25">
+        <div className="font-[arial] group flex min-h-32 w-full flex-col justify-between rounded-xl border border-zinc-600 bg-zinc-950 p-4 text-left transition-colors hover:border-white/25">
           <div className="flex items-center justify-between">
             <Monitor size={18} className="text-zinc-300" />
             <span className="rounded-full bg-white/10 px-2  pt-1 pb-0.5 text-[10px] font-medium uppercase tracking-wider text-zinc-400">
@@ -75,7 +75,7 @@ function ThemeSelection() {
         isSelected={selectedTheme === 'blackhat'}
         onClick={() => themeApi.setTheme('blackhat', 'blackhat-desktop-background')}
       >
-        <div className="group flex min-h-32 w-full flex-col justify-between rounded-xl border border-emerald-950 bg-black p-4 text-left transition-colors hover:border-emerald-700">
+        <div className="font-mono group flex min-h-32 w-full flex-col justify-between rounded-xl border border-emerald-950 bg-black p-4 text-left transition-colors hover:border-emerald-700">
           <div className="flex items-center justify-between">
             <Shield size={18} className="text-emerald-400" />
             <span className="rounded-full border border-emerald-900/80 bg-emerald-950/40 px-2  pt-1 pb-0.5 text-[10px] font-medium uppercase tracking-wider text-emerald-500">
@@ -83,7 +83,7 @@ function ThemeSelection() {
             </span>
           </div>
           <div>
-            <p className="font-mono text-sm font-medium text-emerald-300">Blackhat</p>
+            <p className="text-sm font-medium text-emerald-300">Blackhat</p>
             <p className="mt-1 text-xs text-emerald-700">Terminal-inspired</p>
           </div>
         </div>
@@ -92,7 +92,7 @@ function ThemeSelection() {
         isSelected={selectedTheme === 'retro'}
         onClick={() => themeApi.setTheme('retro', 'retro-desktop-background')}
       >
-        <div className="group flex min-h-32 w-full flex-col justify-between rounded-xl border-2 border-b-zinc-900 border-r-zinc-900 border-t-zinc-300 border-l-zinc-300 bg-zinc-600 p-4 text-left transition-colors hover:bg-zinc-500">
+        <div className="font-sans group flex min-h-32 w-full flex-col justify-between rounded-xl border-2 border-b-zinc-900 border-r-zinc-900 border-t-zinc-300 border-l-zinc-300 bg-zinc-600 p-4 text-left transition-colors hover:bg-zinc-500">
           <div className="flex items-center justify-between">
             <Clock3 size={18} className="text-stone-100" />
             <span className="rounded-sm border border-zinc-400 bg-zinc-500 px-2 pt-1 pb-0.5 text-[10px] font-medium uppercase tracking-wider text-stone-100">
@@ -100,24 +100,24 @@ function ThemeSelection() {
             </span>
           </div>
           <div>
-            <p className="font-sans text-sm font-medium text-stone-50">Retro</p>
+            <p className="text-sm font-medium text-stone-50">Retro</p>
             <p className="mt-1 text-xs text-zinc-300">A familiar throwback</p>
           </div>
         </div>
       </ThemeButton>
       <ThemeButton
-        isSelected={selectedTheme === 'brutalist'}
-        onClick={() => themeApi.setTheme('brutalist', 'brutalist-desktop-background')}
+        isSelected={selectedTheme === 'whiteboard'}
+        onClick={() => themeApi.setTheme('whiteboard', 'whiteboard-desktop-background')}
       >
-        <div className="group font-sans flex min-h-32 w-full flex-col justify-between rounded-xl border-2 border-black bg-[#d2a516] p-4 text-left transition-transform hover:-rotate-1">
+        <div className="group font-sans flex min-h-32 w-full flex-col justify-between rounded-xl border-2 border-black bg-white p-4 text-left transition-transform hover:-rotate-1">
           <div className="flex items-center justify-between">
-            <Palette size={18} className="text-black" />
+            <Presentation size={18} className="text-black" />
             <span className="border-2 border-black bg-white px-2 pt-1 pb-0.5 text-[10px] font-medium uppercase tracking-wider text-black">
               Bold
             </span>
           </div>
           <div>
-            <p className="text-sm font-black uppercase text-black">Brutalist</p>
+            <p className="text-sm font-black uppercase text-black">Whiteboard</p>
             <p className="mt-1 text-xs text-black/70">Blocky and off-kilter</p>
           </div>
         </div>

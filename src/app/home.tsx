@@ -8,11 +8,12 @@ import WindowView from './components/window-ui/window-view.tsx'
 import './bg-styles/dark-rays-background.css'
 import './bg-styles/blackhat-background.css'
 import './bg-styles/retro-background.css'
-import './bg-styles/brutalist-background.css'
+import './bg-styles/whiteboard-background.css'
 import { useThemeStore } from './app-theme/theme-state.ts'
 import ProjectWindowContent from './components/window-ui/projects/project-window-content.tsx'
 import SettingsWindowInnerHtml from './components/window-ui/settings/settings-window-inner-html.tsx'
 import ProfileWindowContent from './components/window-ui/profile/profile-window-content.tsx'
+import ServerStatsWindowContent from './components/window-ui/server-stats/server-stats-window-content.tsx'
 
 themeApi.initThemeFromMemory()
 
@@ -33,7 +34,7 @@ export default function Home() {
             EMAIL
           </WindowView>
           <WindowView windowName="System" Window={serverStat.Window}>
-            SYSTEM
+            <ServerStatsWindowContent />
           </WindowView>
           <WindowView defaultDock="right" windowName="Settings" Window={settings.Window}>
             <SettingsWindowInnerHtml />

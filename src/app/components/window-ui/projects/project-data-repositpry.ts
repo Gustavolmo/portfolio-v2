@@ -160,7 +160,7 @@ export const projects = {
     URLs: [],
     role: 'Fullstack Software Developer',
     year: '2024 — present',
-    technologies: ['C#', '.NET', 'stencil.js', 'Angular', 'TypeScript'],
+    technologies: ['C#', '.NET', 'stencil.js', 'Angular', 'TypeScript', 'Micro-frontends'],
     highlights: [
       'Rendering API, transforming CAD data into PNG vehicle images.',
       'ECS-like engine that maps the flat PNG image into image regions, enabling client interaction.',

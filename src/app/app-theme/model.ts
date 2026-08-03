@@ -3,11 +3,11 @@ export type BackgroundClass =
   | 'dark-rays-desktop-background'
   | 'blackhat-desktop-background'
   | 'retro-desktop-background'
-  | 'brutalist-desktop-background'
+  | 'whiteboard-desktop-background'
   | 'custom-background-color'
 
 export type ThemeState = ThemeName | 'custom'
-export type ThemeName = 'sysAdminDefault' | 'blackhat' | 'retro' | 'brutalist'
+export type ThemeName = 'sysAdminDefault' | 'blackhat' | 'retro' | 'whiteboard'
 
 export type ThemeProperty =
   | '--custom-background-color'
