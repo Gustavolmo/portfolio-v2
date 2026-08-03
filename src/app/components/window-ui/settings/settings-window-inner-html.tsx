@@ -1,6 +1,6 @@
 import { themeApi } from '../../../app-theme/theme-api.ts'
 import { useThemeStore } from '../../../app-theme/theme-state.ts'
-import { Clock3, Monitor, Palette, Shield, Sparkles } from 'lucide-react'
+import { Clock3, Monitor, Palette, Shield, SwatchBook } from 'lucide-react'
 import ThemeButton from './theme-button.tsx'
 import { ColorStyleControl } from './style-controls/color-style-control.tsx'
 import { NumberStyleControl } from './style-controls/number-style-control.tsx'
@@ -12,11 +12,8 @@ export default function SettingsWindowInnerHtml() {
     <div className="p-4 theme-text-primary-color theme-text-font-family">
       <article className="overflow-hidden border border-zinc-400/10 bg-zinc-900/10">
         <header className="flex items-start gap-3 border-b border-zinc-400/10 px-5 py-4 sm:px-6">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-opacity-70">
-            <Palette size={19} strokeWidth={1.8} />
-          </div>
           <div>
-            <h2 className="font-medium text-opacity-90">Appearance</h2>
+            <h2 className="font-medium text-opacity-90 up">Appearance</h2>
             <p className="mt-0.5 text-sm text-opacity-55">
               Personalize the look and feel of your workspace.
             </p>
@@ -26,7 +23,7 @@ export default function SettingsWindowInnerHtml() {
         <div className="flex flex-col gap-8 p-5">
           <section>
             <div className="mb-3 flex items-center gap-2">
-              <Sparkles size={15} className="text-opacity-90" />
+              <SwatchBook size={18} className="text-opacity-90" />
               <div>
                 <h3 className="text-sm font-medium text-opacity-75">Theme</h3>
                 <p className="text-xs text-opacity-50">Choose a visual style for your desktop.</p>
@@ -40,7 +37,6 @@ export default function SettingsWindowInnerHtml() {
         <div className="flex flex-col gap-8 p-5">
           <section>
             <div className="mb-3 flex items-center gap-2">
-              <Palette size={15} className="text-opacity-90" />
               <div>
                 <h3 className="text-sm font-medium text-opacity-75">Customize</h3>
                 <p className="text-xs text-opacity-50">Fine-tune your interface.</p>

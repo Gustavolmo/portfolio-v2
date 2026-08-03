@@ -4,7 +4,7 @@ import ProjectShowcase from './project-showcase.tsx'
 
 export default function ProjectWindowContent() {
   const [selectedTab, setSelectedTab] = useState<
-    'RWM' | 'Scania' | 'Allverk' | 'Bootlr' | 'MangoMoji'
+    'RWM' | 'Scania' | 'Allverk' | 'Bootlr' | 'Mangomoji'
   >('RWM')
 
   const tabs = (
@@ -28,10 +28,10 @@ export default function ProjectWindowContent() {
         Bootlr
       </button>
       <button
-        className={`theme-text-font-family ${selectedTab === 'MangoMoji' ? 'opacity-100' : 'opacity-50'}`}
-        onClick={() => setSelectedTab('MangoMoji')}
+        className={`theme-text-font-family ${selectedTab === 'Mangomoji' ? 'opacity-100' : 'opacity-50'}`}
+        onClick={() => setSelectedTab('Mangomoji')}
       >
-        MangoMoji
+        Mangomoji
       </button>
       <button
         className={`theme-text-font-family ${selectedTab === 'Scania' ? 'opacity-100' : 'opacity-50'}`}
@@ -47,9 +47,9 @@ export default function ProjectWindowContent() {
       {tabs}
       {selectedTab === 'RWM' && <ProjectShowcase project={projects.reactWindowManager} />}
       {selectedTab === 'Allverk' && <ProjectShowcase project={projects.allverk} />}
-      {selectedTab === 'Bootlr' && <p>Bootlr</p>}
-      {selectedTab === 'MangoMoji' && <p>MangoMoji</p>}
-      {selectedTab === 'Scania' && <p>Scania</p>}
+      {selectedTab === 'Bootlr' && <ProjectShowcase project={projects.bootlr} />}
+      {selectedTab === 'Mangomoji' && <ProjectShowcase project={projects.mangomoji} />}
+      {selectedTab === 'Scania' && <ProjectShowcase project={projects.scania} />}
     </div>
   )
 }

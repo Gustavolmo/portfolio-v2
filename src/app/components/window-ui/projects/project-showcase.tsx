@@ -27,7 +27,7 @@ export default function ProjectShowcase({ project }: Props) {
                   </div>
                   {project.statusDisclaimer && (
                     <p
-                      className={`mt-2 max-w-sm text-xs leading-5 opacity-80 box-decoration-clone inline w-fit px-2 ${status.textColor}`}
+                      className={`mt-2 max-w-sm text-sm leading-5 opacity-80 box-decoration-clone inline w-fit px-2 ${status.textColor}`}
                     >
                       {project.statusDisclaimer}
                     </p>
@@ -37,7 +37,7 @@ export default function ProjectShowcase({ project }: Props) {
                 {project.image && (
                   <img
                     alt={project.image.alt}
-                    className="h-5 object-cover"
+                    className={`${project.image.height} object-cover`}
                     src={project.image.src}
                   />
                 )}
@@ -83,7 +83,7 @@ export default function ProjectShowcase({ project }: Props) {
             <figure className="mt-6">
               <img
                 alt={project.showcaseImage.alt}
-                className="max-h-[28rem] w-full border border-zinc-600/20 object-cover"
+                className="w-full border border-zinc-600/20 object-contain"
                 src={project.showcaseImage.src}
               />
             </figure>
@@ -111,16 +111,6 @@ export default function ProjectShowcase({ project }: Props) {
               ))}
             </ul>
           </section>
-
-          {/* <a
-            className="text-opacity-90 mt-7 inline-flex items-center gap-2 border border-zinc-100/25 bg-zinc-950/20 px-3 py-2 text-sm transition-opacity hover:opacity-70"
-            href={project.url}
-            rel="noreferrer"
-            target="_blank"
-          >
-            Visit project
-            <ExternalLink size={15} />
-          </a> */}
         </section>
       </div>
     </article>
