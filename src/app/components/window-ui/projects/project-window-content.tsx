@@ -46,10 +46,10 @@ export default function ProjectWindowContent() {
     <div className="h-full w-full relative p-1 pt-12">
       {tabs}
       {selectedTab === 'RWM' && <ProjectShowcase project={projects.reactWindowManager} />}
-      {selectedTab === 'Scania' && <p>Scania</p>}
-      {selectedTab === 'Allverk' && <p>Allverk</p>}
+      {selectedTab === 'Allverk' && <ProjectShowcase project={projects.allverk} />}
       {selectedTab === 'Bootlr' && <p>Bootlr</p>}
       {selectedTab === 'MangoMoji' && <p>MangoMoji</p>}
+      {selectedTab === 'Scania' && <p>Scania</p>}
     </div>
   )
 }
