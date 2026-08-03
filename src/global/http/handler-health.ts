@@ -1,16 +1,16 @@
 import { apiUrls } from './api-urls.ts'
 
 type HealthResponse = {
-  status: 'ok'
+  status: string
 }
 
-export type getHealthStatus = {
+export type GetHealthStatus = {
   success: boolean
   msg: string
 }
 
 export const healthApi = {
-  getHealth: async (): Promise<getHealthStatus> => {
+  getHealth: async (): Promise<GetHealthStatus> => {
     const healthRequest = new Request(apiUrls.health, {
       method: 'GET',
       headers: {
@@ -23,7 +23,8 @@ export const healthApi = {
     if (!res.ok) {
       return { msg: `Server is down - ${res.status}`, success: false }
     } else {
-      return { msg: ((await res.json()) as HealthResponse).status, success: true }
+      const healthResponse = (await res.json()) as HealthResponse
+      return { msg: healthResponse.status, success: true }
     }
   },
 }
