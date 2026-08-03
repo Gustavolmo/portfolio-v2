@@ -4,7 +4,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
   sysAdminDefault: {
     '--custom-background-color': 'none',
     '--window-radius': '2px',
-    '--window-bg-color': '#111111',
+    '--window-bg-color': '#121212',
     '--window-border-color': '#52525b',
     '--window-border-style': 'solid',
     '--window-border-thickness': '1px',
@@ -18,7 +18,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--navbar-tabs-gap': '0px',
 
     '--window-navhandle-tabs-bg-color': '#18181b ',
-    '--window-navhandle-title-color': 'white ',
+    '--window-navhandle-title-color': 'white',
 
     '--navbar-window-button-bg': '#18181b',
     '--navbar-window-button-color': '#a1a1aa',
@@ -60,7 +60,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--desktop-window-icon-border-bottom-color': '#a1a1aa',
     '--desktop-window-icon-border-left-color': 'transparent',
 
-    '--text-primary-color': '#f4f4f5',
+    '--text-primary-color': 'white',
     '--text-primary-font-family': 'Arial',
   },
 

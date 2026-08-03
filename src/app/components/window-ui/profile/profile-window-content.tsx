@@ -1,3 +1,4 @@
+import { BookOpenText, Hammer } from 'lucide-react'
 import { experience, projects, skills } from './profile-data-repository.ts'
 import SectionTitle from './profile-section-title.tsx'
 
@@ -54,7 +55,10 @@ export default function ProfileWindowContent() {
         </header>
 
         <section>
-          <SectionTitle>Summary</SectionTitle>
+          <SectionTitle>
+            <BookOpenText />
+            Summary
+          </SectionTitle>
           <p className="text-opacity-90 mt-3 max-w-3xl text-base leading-7">
             Full-stack software engineer building production web applications with Go, C#,
             TypeScript, React, .NET, and PostgreSQL. I combine backend development, frontend
@@ -66,7 +70,10 @@ export default function ProfileWindowContent() {
         </section>
 
         <section className="border-y border-zinc-100/15 py-6">
-          <SectionTitle>Technical skills</SectionTitle>
+          <SectionTitle>
+            <Hammer />
+            Technical skills
+          </SectionTitle>
           <div className="mt-4 flex flex-wrap gap-x-8 gap-y-5">
             {Object.entries(skills).map(([group, entries]) => (
               <div className="min-w-[12rem] grow basis-[14rem]" key={group}>

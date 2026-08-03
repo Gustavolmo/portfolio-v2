@@ -5,6 +5,7 @@ import ThemeButton from './theme-button.tsx'
 import { ColorStyleControl } from './style-controls/color-style-control.tsx'
 import { NumberStyleControl } from './style-controls/number-style-control.tsx'
 import { SelectStyleControl } from './style-controls/select-style-control.tsx'
+import CollapsibleSection from './style-controls/shared/collapsable-section.tsx'
 
 export default function SettingsWindowInnerHtml() {
   return (
@@ -112,7 +113,7 @@ function ThemeSelection() {
         isSelected={selectedTheme === 'brutalist'}
         onClick={() => themeApi.setTheme('brutalist', 'brutalist-desktop-background')}
       >
-        <div className="group flex min-h-32 w-full flex-col justify-between rounded-xl border-2 border-black bg-[#d2a516] p-4 text-left transition-transform hover:-rotate-1">
+        <div className="group font-sans flex min-h-32 w-full flex-col justify-between rounded-xl border-2 border-black bg-[#d2a516] p-4 text-left transition-transform hover:-rotate-1">
           <div className="flex items-center justify-between">
             <Palette size={18} className="text-black" />
             <span className="border-2 border-black bg-white px-2 pt-1 pb-0.5 text-[10px] font-medium uppercase tracking-wider text-black">
@@ -132,15 +133,10 @@ function ThemeSelection() {
 function ThemeCustomization() {
   return (
     <article className="flex flex-col gap-6">
-      <section>
-        <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
-            Desktop & windows
-          </h4>
-          <p className="mt-1 text-xs text-opacity-45">
-            Shape the workspace and every application window.
-          </p>
-        </div>
+      <CollapsibleSection
+        title="Desktop & windows"
+        description="Shape the workspace and every application window."
+      >
         <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--custom-background-color"
@@ -191,17 +187,12 @@ function ThemeCustomization() {
             ]}
           />
         </div>
-      </section>
+      </CollapsibleSection>
 
-      <section>
-        <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
-            Window title bars
-          </h4>
-          <p className="mt-1 text-xs text-opacity-45">
-            Customize the handle and tabs inside each window.
-          </p>
-        </div>
+      <CollapsibleSection
+        title="Window title bars"
+        description="Customize the handle and tabs inside each window."
+      >
         <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--window-navhandle-bg-color"
@@ -228,17 +219,12 @@ function ThemeCustomization() {
             value="#18181b"
           />
         </div>
-      </section>
+      </CollapsibleSection>
 
-      <section>
-        <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
-            Navigation bar
-          </h4>
-          <p className="mt-1 text-xs text-opacity-45">
-            Control the navbar at the bottom of your workspace.
-          </p>
-        </div>
+      <CollapsibleSection
+        title="Navigation bar"
+        description="Control the navbar at the bottom of your workspace."
+      >
         <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--navbar-bg-color"
@@ -274,17 +260,12 @@ function ThemeCustomization() {
             value="#f4f4f5"
           />
         </div>
-      </section>
+      </CollapsibleSection>
 
-      <section>
-        <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
-            Navigation buttons
-          </h4>
-          <p className="mt-1 text-xs text-opacity-45">
-            Tune the navbar buttons used to open and switch between windows.
-          </p>
-        </div>
+      <CollapsibleSection
+        title="Navigation buttons"
+        description="Tune the navbar buttons used to open and switch between windows."
+      >
         <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--navbar-window-button-bg"
@@ -337,17 +318,12 @@ function ThemeCustomization() {
             unit="px"
           />
         </div>
-      </section>
+      </CollapsibleSection>
 
-      <section>
-        <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
-            Navigation button borders
-          </h4>
-          <p className="mt-1 text-xs text-opacity-45">
-            Each edge is independent for precise treatments.
-          </p>
-        </div>
+      <CollapsibleSection
+        title="Navigation button borders"
+        description="Each edge is independent for precise treatments."
+      >
         <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <NumberStyleControl
             property="--navbar-window-button-border-top-width"
@@ -446,17 +422,12 @@ function ThemeCustomization() {
             value="#18181b"
           />
         </div>
-      </section>
+      </CollapsibleSection>
 
-      <section>
-        <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
-            Desktop icons
-          </h4>
-          <p className="mt-1 text-xs text-opacity-45">
-            Style the launchers displayed across the desktop.
-          </p>
-        </div>
+      <CollapsibleSection
+        title="Desktop icons"
+        description="Style the launchers displayed across the desktop."
+      >
         <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--desktop-window-icon-color"
@@ -499,17 +470,12 @@ function ThemeCustomization() {
             value="#52525b"
           />
         </div>
-      </section>
+      </CollapsibleSection>
 
-      <section>
-        <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
-            Desktop icon borders
-          </h4>
-          <p className="mt-1 text-xs text-opacity-45">
-            Give each launcher its own beveled, outlined, or borderless edge.
-          </p>
-        </div>
+      <CollapsibleSection
+        title="Desktop icon borders"
+        description="Give each launcher its own beveled, outlined, or borderless edge."
+      >
         <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <NumberStyleControl
             property="--desktop-window-icon-border-top-width"
@@ -608,17 +574,12 @@ function ThemeCustomization() {
             value="#ffffff"
           />
         </div>
-      </section>
+      </CollapsibleSection>
 
-      <section>
-        <div className="mb-3">
-          <h4 className="text-xs font-medium uppercase tracking-wider text-opacity-90">
-            Typography
-          </h4>
-          <p className="mt-1 text-xs text-opacity-45">
-            Set the primary type treatment used throughout the interface.
-          </p>
-        </div>
+      <CollapsibleSection
+        title="Typography"
+        description="Set the primary type treatment used throughout the interface."
+      >
         <div className="flex flex-wrap gap-3 [&>div]:min-w-56 [&>div]:flex-1">
           <ColorStyleControl
             property="--text-primary-color"
@@ -641,7 +602,7 @@ function ThemeCustomization() {
             ]}
           />
         </div>
-      </section>
+      </CollapsibleSection>
     </article>
   )
 }

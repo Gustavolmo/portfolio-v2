@@ -31,9 +31,10 @@ export const experience = [
     period: 'January 2024 — Present',
     location: 'Södertälje, Stockholm, Sweden',
     details: [
+      'Implemented ECS-like systems for mapping vehicle PNG images into an interactive client overlay',
+      'Refactored legacy systems to use modern and maintanable architecture',
+      'Translated mechanical engineering needs into usable features',
       'Develop enterprise applications using .NET, TypeScript, and modern web technologies.',
-      'Build and maintain production software used across business-critical workflows.',
-      'Collaborate with cross-functional teams to clarify requirements, ship features, and improve internal tooling.',
     ],
     technologies: '.NET · TypeScript',
   },
@@ -54,7 +55,7 @@ export const experience = [
     period: 'September 2022 — January 2023',
     location: 'Stockholm, Sweden',
     details: [
-      'Supported executive operations, communications, and meeting preparation within the CTO Office.',
+      'Supported executive operations, communications, and meeting preparation for and within the CTO Office.',
       'Worked closely with engineering and leadership stakeholders.',
     ],
   },
@@ -66,6 +67,7 @@ export const experience = [
     details: [
       'Produced technical and administrative documentation, analysis, and reporting.',
       'Coordinated international visits and official events, including translation and interpretation services.',
+      'Created a complete operational manual for the administrative assistant role, outlining tasks, contacts, guides, and examples',
     ],
   },
 ]
