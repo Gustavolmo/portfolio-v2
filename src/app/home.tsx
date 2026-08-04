@@ -14,6 +14,7 @@ import ProjectWindowContent from './components/window-ui/projects/project-window
 import SettingsWindowInnerHtml from './components/window-ui/settings/settings-window-inner-html.tsx'
 import ProfileWindowContent from './components/window-ui/profile/profile-window-content.tsx'
 import ServerStatsWindowContent from './components/window-ui/server-stats/server-stats-window-content.tsx'
+import EmailWindowContent from './components/window-ui/email/email-window-content.tsx'
 
 themeApi.initThemeFromMemory()
 
@@ -24,16 +25,16 @@ export default function Home() {
     <main className="fixed w-full h-full flex flex-col">
       <WorkspaceLayout className="h-full w-full grow">
         <div className={`p-8 md:p-16 w-full h-full ${selectedBackground} mb-12`}>
-          <WindowView windowName="Profile" Window={profile.Window}>
+          <WindowView defaultDock='full' windowName="Profile" Window={profile.Window}>
             <ProfileWindowContent />
           </WindowView>
-          <WindowView windowName="Projects" Window={projects.Window}>
+          <WindowView defaultDock='left' windowName="Projects" Window={projects.Window}>
             <ProjectWindowContent />
           </WindowView>
-          <WindowView windowName="Email" Window={email.Window}>
-            EMAIL
+          <WindowView defaultDock='left' windowName="Email" Window={email.Window}>
+            <EmailWindowContent />
           </WindowView>
-          <WindowView windowName="System" Window={serverStat.Window}>
+          <WindowView defaultDock='top-left' windowName="System" Window={serverStat.Window}>
             <ServerStatsWindowContent />
           </WindowView>
           <WindowView defaultDock="right" windowName="Settings" Window={settings.Window}>

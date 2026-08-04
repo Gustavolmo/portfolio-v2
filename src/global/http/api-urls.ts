@@ -4,6 +4,7 @@ class ApiUrls {
 
   readonly health = `${this.origin}/health`
   readonly observe = `${this.origin}/observe`
+  readonly email = `${this.origin}/email`
 }
 
 export const apiUrls = new ApiUrls()
