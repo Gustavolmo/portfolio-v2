@@ -18,13 +18,16 @@ export const healthApi = {
       },
     })
 
-    const res = await fetch(healthRequest)
-
-    if (!res.ok) {
-      return { msg: `Server is down - ${res.status}`, success: false }
-    } else {
-      const healthResponse = (await res.json()) as HealthResponse
-      return { msg: healthResponse.status, success: true }
+    try {
+      const res = await fetch(healthRequest)
+      if (!res.ok) {
+        return { msg: `Server is down - ${res.status}`, success: false }
+      } else {
+        const healthResponse = (await res.json()) as HealthResponse
+        return { msg: healthResponse.status, success: true }
+      }
+    } catch (err) {
+      return { msg: `Server is down - ${err}`, success: false }
     }
   },
 }
