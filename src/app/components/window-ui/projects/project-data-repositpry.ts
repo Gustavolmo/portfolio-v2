@@ -94,7 +94,7 @@ export const projects = {
     showcaseImage: { src: allverkHero, alt: 'allverk-hero' },
     description: 'Sweden`s simplest quotation tool',
     summary:
-      'Allverk.se is a public, free website for finding and contacting tradespeople. It features a embedding based search, and AI powered recommendations.',
+      'Allverk.se is a public, free website for finding and contacting tradespeople. It features over 2000 businesses, an embeddings based search, and AI powered recommendations.',
     URLs: [
       { address: 'https://www.allverk.se/', cta: 'Allverk' },
       { address: 'https://offert.allverk.se', cta: 'Offert.Allverk' },

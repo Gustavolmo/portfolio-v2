@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@gustavolmo/react-window-manager':
-        specifier: latest
+        specifier: 0.4.5
         version: 0.4.5(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       lucide-react:
         specifier: ^0.575.0
