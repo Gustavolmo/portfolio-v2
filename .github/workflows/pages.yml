@@ -30,13 +30,13 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter frontend run build
-      - run: touch frontend/docs/.nojekyll
+      - run: pnpm run build
+      - run: touch docs/.nojekyll
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./frontend/docs
+          path: ./docs
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,4 +47,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-        
