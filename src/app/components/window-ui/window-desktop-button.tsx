@@ -1,0 +1,25 @@
+import { WindowRegistration } from '@gustavolmo/react-window-manager'
+import { LucideProps } from 'lucide-react'
+import { ComponentType } from 'react'
+
+type Prop = {
+  title: string
+  Button: WindowRegistration['Button']
+  Icon: ComponentType<LucideProps>
+}
+
+export default function WindowDesktopButton({ title, Button, Icon }: Prop) {
+  return (
+    <div className="flex flex-col items-center h-fit z-0">
+      <Button
+        isOpenClassName="brightness-150"
+        isActiveClassName="brightness-150"
+        isClosedClassName="brightness-100"
+        className="theme-desktop-window-icon flex justify-center"
+      >
+        <Icon className="h-10 w-10 theme-text-font-family min-w-8" />
+      </Button>
+      <p className="text-sm theme-desktop-window-icon-text-color theme-text-font-family mt-0.5">{title}</p>
+    </div>
+  )
+}

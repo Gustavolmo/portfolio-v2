@@ -1,0 +1,6 @@
+.retro-desktop-background {
+  position: absolute;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #5da6e8 0%, #96c8f0 44%, #d9eefc 62%, #69a72f 63%, #3d7e20 100%);
+}

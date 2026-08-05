@@ -2,241 +2,135 @@
 @tailwind components;
 @tailwind utilities;
 
-@property --stop1 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 30%;
-}
-@property --stop2 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 60%;
-}
-@property --stop3 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 70%;
-}
-@property --angle {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 150deg;
-}
-@property --alpha1 {
-  syntax: '<number>';
-  inherits: false;
-  initial-value: 0.005;
-}
-@property --alpha2 {
-  syntax: '<number>';
-  inherits: false;
-  initial-value: 0.05;
-}
-
-@property --a1 {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 110deg;
-}
-@property --a2 {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 120deg;
-}
-@property --a3 {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 130deg;
-}
-@property --a4 {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 140deg;
-}
-@property --a5 {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 150deg;
-}
-@property --a6 {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 160deg;
-}
-@property --a7 {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 170deg;
-}
-
-:root {
-  --stop1: -20%;
-  --stop2: -10%;
-  --stop3: 70%;
-
-  --alpha1: 0.005;
-  --alpha2: 0.05;
-}
-
-.desktop-background {
-  position: absolute;
-  background: #0b1111;
-  overflow: hidden;
-}
-
-.desktop-background::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  background:
-    linear-gradient(
-      var(--a1),
-      rgba(0, 255, 255, var(--alpha1)) var(--stop1),
-      rgba(0, 255, 255, var(--alpha2)) var(--stop2),
-      transparent var(--stop3)
-    ),
-    linear-gradient(
-      var(--a2),
-      rgba(255, 255, 255, var(--alpha1)) var(--stop1),
-      rgba(255, 255, 255, var(--alpha2)) var(--stop2),
-      transparent var(--stop3)
-    ),
-    linear-gradient(
-      var(--a3),
-      rgba(255, 255, 0, var(--alpha1)) var(--stop1),
-      rgba(255, 255, 0, var(--alpha2)) var(--stop2),
-      transparent var(--stop3)
-    ),
-    linear-gradient(
-      var(--a4),
-      rgba(255, 255, 0, var(--alpha1)) var(--stop1),
-      rgba(255, 255, 0, var(--alpha2)) var(--stop2),
-      transparent var(--stop3)
-    ),
-    linear-gradient(
-      var(--a5),
-      rgba(255, 255, 255, var(--alpha1)) var(--stop1),
-      rgba(255, 255, 255, var(--alpha2)) var(--stop2),
-      transparent var(--stop3)
-    ),
-    linear-gradient(
-      var(--a6),
-      rgba(255, 255, 255, var(--alpha1)) var(--stop1),
-      rgba(255, 255, 255, var(--alpha2)) var(--stop2),
-      transparent var(--stop3)
-    ),
-    linear-gradient(
-      var(--a7),
-      rgba(255, 0, 0, var(--alpha1)) var(--stop1),
-      rgba(255, 0, 0, var(--alpha2)) var(--stop2),
-      transparent var(--stop3)
-    ),
-    #0d1113;
-
-  animation:
-    pan 240s linear infinite,
-    refract 180s linear infinite;
-}
-
-@keyframes pan {
-  0% {
-    --stop1: -20%;
-    --stop2: -10%;
-    --stop3: 70%;
-  }
-  30% {
-    --stop1: 0%;
-    --stop2: 30%;
-    --stop3: 65%;
-  }
-  40% {
-    --stop1: 40%;
-    --stop2: 90%;
-    --stop3: 100%;
-  }
-  50% {
-    --stop1: 10%;
-    --stop2: 100%;
-    --stop3: 120%;
-  }
-  60% {
-    --stop1: 40%;
-    --stop2: 90%;
-    --stop3: 100%;
-  }
-  70% {
-    --stop1: 0%;
-    --stop2: 30%;
-    --stop3: 65%;
-  }
-  100% {
-    --stop1: -20%;
-    --stop2: -10%;
-    --stop3: 70%;
-  }
-}
-
-@keyframes refract {
-  0% {
-    --a1: 110deg;
-    --a2: 120deg;
-    --a3: 130deg;
-    --a4: 140deg;
-    --a5: 150deg;
-    --a6: 160deg;
-    --a7: 170deg;
-  }
-  30% {
-    --a1: 280deg;
-    --a2: 300deg;
-    --a3: 310deg;
-    --a4: 320deg;
-    --a5: 330deg;
-    --a6: 340deg;
-    --a7: 360deg;
-  }
-  48% {
-    --a1: 465deg;
-    --a2: 475deg;
-    --a3: 485deg;
-    --a4: 495deg;
-    --a5: 505deg;
-    --a6: 515deg;
-    --a7: 525deg;
-  }
-  52% {
-    --a1: 470deg;
-    --a2: 480deg;
-    --a3: 490deg;
-    --a4: 500deg;
-    --a5: 510deg;
-    --a6: 520deg;
-    --a7: 550deg;
-  }
-  70% {
-    --a1: 280deg;
-    --a2: 300deg;
-    --a3: 310deg;
-    --a4: 320deg;
-    --a5: 330deg;
-    --a6: 340deg;
-    --a7: 360deg;
-  }
-  100% {
-    --a1: 110deg;
-    --a2: 120deg;
-    --a3: 130deg;
-    --a4: 140deg;
-    --a5: 150deg;
-    --a6: 160deg;
-    --a7: 170deg;
-  }
-}
-
 body {
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   user-select: none;
+}
+
+.custom-background-color {
+  background-color: var(--custom-background-color);
+}
+
+.theme-window {
+  border-radius: var(--window-radius);
+  background-color: var(--window-bg-color);
+  box-shadow: rgb(0, 0, 0, 0.1) 0px 4px 2px 2px;
+  border: var(--window-border-thickness) var(--window-border-style) var(--window-border-color);
+}
+
+.theme-window-navhandle {
+  background-color: var(--window-navhandle-bg-color);
+  color: var(--window-navhandle-title-color);  
+}
+
+.theme-window-navhandle-tabs {
+  background-color: var(--window-navhandle-tabs-bg-color);
+  color: var(--window-navhandle-tabs-text-color)
+}
+
+.theme-navbar {
+  background-color: var(--navbar-bg-color);
+  opacity: var(--navbar-opacity);
+  justify-content: var(--navbar-justify);
+}
+
+.theme-navbar-tabs {
+  gap: var(--navbar-tabs-gap)
+}
+
+.theme-navbar-window-button {
+  background-color: var(--navbar-window-button-bg);
+  color: var(--navbar-window-button-color);
+  font-size: var(--navbar-window-button-font-size);
+  line-height: var(--navbar-window-button-line-height);
+  height: var(--navbar-window-button-height);
+  padding-inline: var(--navbar-window-button-padding-inline);
+  border-radius: var(--navbar-window-button-radius);
+
+  border-top-width: var(--navbar-window-button-border-top-width);
+  border-right-width: var(--navbar-window-button-border-right-width);
+  border-bottom-width: var(--navbar-window-button-border-bottom-width);
+  border-left-width: var(--navbar-window-button-border-left-width);
+
+  border-top-style: var(--navbar-window-button-border-top-style);
+  border-right-style: var(--navbar-window-button-border-right-style);
+  border-bottom-style: var(--navbar-window-button-border-bottom-style);
+  border-left-style: var(--navbar-window-button-border-left-style);
+
+  border-top-color: var(--navbar-window-button-border-top-color);
+  border-right-color: var(--navbar-window-button-border-right-color);
+  border-bottom-color: var(--navbar-window-button-border-bottom-color);
+  border-left-color: var(--navbar-window-button-border-left-color);
+}
+
+.theme-navbar-settings-button {
+  color: var(--navbar-settings-button-color);
+}
+
+.theme-desktop-window-icon-text-color {
+  color: var(--desktop-window-icon-color);
+}
+
+.theme-desktop-window-icon {
+  color: var(--desktop-window-icon-color);
+  width: var(--desktop-window-icon-width);
+  padding: var(--desktop-window-icon-padding);
+  border-radius: var(--desktop-window-icon-border-radius);
+  background-color: var(--desktop-window-icon-background);
+
+  border-top-width: var(--desktop-window-icon-border-top-width);
+  border-right-width: var(--desktop-window-icon-border-right-width);
+  border-bottom-width: var(--desktop-window-icon-border-bottom-width);
+  border-left-width: var(--desktop-window-icon-border-left-width);
+
+  border-top-style: var(--desktop-window-icon-border-top-style);
+  border-right-style: var(--desktop-window-icon-border-right-style);
+  border-bottom-style: var(--desktop-window-icon-border-bottom-style);
+  border-left-style: var(--desktop-window-icon-border-left-style);
+
+  border-top-color: var(--desktop-window-icon-border-top-color);
+  border-right-color: var(--desktop-window-icon-border-right-color);
+  border-bottom-color: var(--desktop-window-icon-border-bottom-color);
+  border-left-color: var(--desktop-window-icon-border-left-color);
+}
+
+.theme-text-primary-color {
+  color: var(--text-primary-color);
+}
+
+.theme-text-primary-color .text-opacity-90 {
+  color: color-mix(in srgb, var(--text-primary-color) 90%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-75 {
+  color: color-mix(in srgb, var(--text-primary-color) 75%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-70 {
+  color: color-mix(in srgb, var(--text-primary-color) 70%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-60 {
+  color: color-mix(in srgb, var(--text-primary-color) 60%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-55 {
+  color: color-mix(in srgb, var(--text-primary-color) 55%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-50 {
+  color: color-mix(in srgb, var(--text-primary-color) 50%, transparent);
+}
+
+.theme-text-primary-color .text-opacity-45 {
+  color: color-mix(in srgb, var(--text-primary-color) 45%, transparent);
+}
+
+.theme-text-primary-color .placeholder-text-opacity-45::placeholder {
+  color: color-mix(in srgb, var(--text-primary-color) 45%, transparent);
+}
+
+.theme-text-font-family {
+  font-family: var(--text-primary-font-family);
 }

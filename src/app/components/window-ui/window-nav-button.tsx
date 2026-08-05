@@ -1,0 +1,22 @@
+import { WindowRegistration } from '@gustavolmo/react-window-manager'
+import { ReactNode } from 'react'
+
+type Prop = {
+  title: string | ReactNode
+  Button: WindowRegistration['Button']
+}
+
+export default function WindowNavButton({ title, Button }: Prop) {
+  return (
+    <div className="flex flex-col items-center z-0 h-full">
+      <Button
+        isOpenClassName="brightness-[135%]"
+        isActiveClassName="brightness-200"
+        isClosedClassName="brightness-100"
+        className="theme-navbar-window-button theme-text-font-family"
+      >
+        {title}
+      </Button>
+    </div>
+  )
+}
