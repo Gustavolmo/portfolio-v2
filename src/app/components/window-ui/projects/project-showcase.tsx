@@ -52,7 +52,12 @@ export default function ProjectShowcase({ project }: Props) {
             </div>
           </div>
 
-          <p className="text-opacity-90 mt-6 max-w-3xl leading-7">{project.summary}</p>
+          <p className="text-opacity-90 mt-3 max-w-3xl leading-7">{project.summary}</p>
+
+          <section className="mt-6 max-w-3xl">
+            <h2 className="text-opacity-55 text-xs uppercase tracking-[0.2em]">Problem Space</h2>
+            <p className="text-opacity-90 mt-2 leading-7">{project.problemDescription}</p>
+          </section>
           {project.status !== 'offline' &&
             project.URLs.map((url, index) => {
               return (
