@@ -11,7 +11,7 @@ export default function ProjectShowcase({ project }: Props) {
 
   return (
     <article className="theme-text-primary-color theme-text-font-family h-full w-full overflow-y-auto px-4 pt-2 pb-8">
-      <div className="mx-auto max-w-4xl">
+      <div className="animate-bring-up mx-auto max-w-4xl">
         <section>
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="min-w-[14rem] flex flex-col w-full gap-2">

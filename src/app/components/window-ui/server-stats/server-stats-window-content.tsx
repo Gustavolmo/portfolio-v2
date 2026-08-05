@@ -130,8 +130,23 @@ export default function ServerStatsWindowContent() {
         </header>
 
         <div className="p-3">{observeResponse ? telemetryView : idleView}</div>
-        <footer className="border-t border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs tracking-wide text-zinc-500">
-          source=sse · fields=runtime.memstats,clients,cpu
+        <footer className="flex flex-col gap-2 border-t border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs tracking-wide text-zinc-500">
+          <p>source=sse · fields=runtime.memstats,clients,cpu</p>
+          <div>
+            <p className='text-zinc-300'>source-code: </p>
+            <a
+              className="underline text-cyan-500"
+              href="https://github.com/Gustavolmo/portfolio-v2"
+            >
+              Frontend
+            </a>{' '}
+            <a
+              className="underline text-cyan-500"
+              href="https://github.com/Gustavolmo/portfolio-v2-api"
+            >
+              Backend
+            </a>
+          </div>
         </footer>
       </div>
     </section>
