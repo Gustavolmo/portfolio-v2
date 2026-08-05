@@ -22,6 +22,7 @@ export type Project = {
   status: ProjectStatus
   statusDisclaimer?: string
   description: string
+  problemDescription: string
   summary: string
   URLs: { address: string; cta: string }[]
   image?: ProjectImage
@@ -70,6 +71,7 @@ export const projects = {
     image: undefined,
     showcaseImage: { src: RWMHero, alt: 'react-window-manager' },
     description: 'A desktop-style window manager for React applications.',
+    problemDescription: 'How to expose a configurable UI system that is both interactive and mobile responsive.',
     summary:
       'React Window Manager is the framework powering this portfolio. It provides a workspace for independent, draggable, dockable windows, with external controls and isolated state for every window instance.',
     URLs: [{ address: 'https://gustavolmo.github.io/react-window-manager/', cta: 'Documentation' }],
@@ -93,6 +95,7 @@ export const projects = {
     image: { src: allverkLogo, height: 'h-5', alt: 'allverk-logo' },
     showcaseImage: { src: allverkHero, alt: 'allverk-hero' },
     description: 'Sweden`s simplest quotation tool',
+    problemDescription: 'How to compete with website builders and multi-tenant hosts while providing software that is tailored for each user.',
     summary:
       'Allverk.se is a public, free website for finding and contacting tradespeople. It features over 2000 businesses, an embeddings based search, and AI powered recommendations.',
     URLs: [
@@ -115,6 +118,7 @@ export const projects = {
     image: { src: bootlrLogo, height: 'h-16', alt: 'bootlr-logo' },
     showcaseImage: { src: bootlrHero, alt: 'bootlr-hero' },
     description: 'AI powered shopping',
+    problemDescription: 'How to provide an instore experience over a virtual interface.',
     summary:
       'Bootlr was a chat interface with custom MCPs that allows a the model to manipulate the UI, Search products, and answer questions about products.',
     URLs: [],
@@ -135,6 +139,7 @@ export const projects = {
     image: { src: mangomojiLogo, height: 'h-16', alt: 'mangomoji-logo' },
     showcaseImage: { src: mangomojiHero, alt: 'mangomoji-hero' },
     description: 'Emoji powered music',
+    problemDescription: 'Finding music can be overwhelming when people know the feeling they want but not the song or artist to search for.',
     summary:
       'Mangomoji was a music interface platform. An LLM would assign an extensive list on songs based on every emoji combination ahead of time. We then would integrate with apple music and spotify to play the songs.',
     URLs: [{ address: 'https://mangomoji.com/app', cta: 'mangomoji.se' }],
@@ -155,6 +160,7 @@ export const projects = {
     image: undefined,
     showcaseImage: { src: scaniaHero, alt: 'mangomoji-hero' },
     description: 'Scania`s vehicle configuration back office',
+    problemDescription: 'Vehicle teams need accurate, interactive tools to configure and visualize complex products before they are built.',
     summary:
       'As a team, we develop interactive web applications that configure, vizualize and simulate real world vehicles. We also work with cross functional teams to integrate and coordinate new features and requirements.',
     URLs: [],

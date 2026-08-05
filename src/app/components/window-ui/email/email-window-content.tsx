@@ -14,7 +14,6 @@ const recipient = 'lmo.gustavo@gmail.com'
 
 export default function EmailWindowContent() {
   const [from, setFrom] = useState('')
-  const [cc, setCc] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
   const [validation, setValidation] = useState<ComposeErrors>({})
@@ -28,10 +27,6 @@ export default function EmailWindowContent() {
       nextErrors.from = 'Add your email address.'
     } else if (!/^\S+@\S+\.\S+$/.test(from.trim())) {
       nextErrors.from = 'Enter a valid email address.'
-    }
-
-    if (cc.trim() && !/^\S+@\S+\.\S+$/.test(cc.trim())) {
-      nextErrors.cc = 'Enter a valid email address.'
     }
 
     if (!subject.trim()) nextErrors.subject = 'Add a subject.'
@@ -52,7 +47,6 @@ export default function EmailWindowContent() {
     try {
       const { error } = await emailApi.send({
         contactAddress: from.trim(),
-        cc: cc.trim(),
         subject: subject.trim(),
         msg: message.trim(),
       })
@@ -73,7 +67,6 @@ export default function EmailWindowContent() {
 
   function startAnotherEmail() {
     setFrom('')
-    setCc('')
     setSubject('')
     setMessage('')
     setValidation({})
@@ -170,16 +163,6 @@ export default function EmailWindowContent() {
             value={from}
           />
           <EmailField label="To" readOnly value={recipient} />
-          <EmailField
-            autoComplete="email"
-            error={validation.cc}
-            label="Cc"
-            onChange={(value) => updateField('cc', value, setCc)}
-            optional
-            placeholder="Add a recipient"
-            type="email"
-            value={cc}
-          />
           <EmailField
             error={validation.subject}
             label="Subject"

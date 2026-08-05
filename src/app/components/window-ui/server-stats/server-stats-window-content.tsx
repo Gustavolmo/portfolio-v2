@@ -51,7 +51,7 @@ export default function ServerStatsWindowContent() {
       <p className="text-xs uppercase tracking-[0.18em] text-zinc-400"># live runtime snapshot</p>
       <div className="flex flex-wrap gap-2">
         <MetricCard
-          label="Clients"
+          label="Clients (Max. 64)"
           value={observeResponse.connectedClients}
           accent="text-emerald-300"
         />

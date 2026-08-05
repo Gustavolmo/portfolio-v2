@@ -2,7 +2,6 @@ import { apiUrls } from './api-urls.ts'
 
 type EmailPayload = {
   contactAddress: string
-  cc: string
   subject: string
   msg: string
 }
@@ -21,13 +20,13 @@ export const emailApi = {
       const res = await fetch(emailRequest)
       if (!res.ok) {
         console.log(res.status)
-        return { error: `Failed to send: ${res.status} >>>> ${await res.text()}` }
+        return { error: `Failed to send: ${res.status} -> ${await res.text()}` }
       } else {
         return { error: '' }
       }
     } catch (err) {
       console.error('Error caught', err)
-      return { error: `Unhandled exception >>>> ${err}` }
+      return { error: `Unhandled exception -> ${err}` }
     }
   },
 }
