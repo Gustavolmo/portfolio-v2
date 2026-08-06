@@ -1,3 +1,4 @@
+
 class ApiUrls {
   private readonly origin =
     window.location.hostname === 'localhost' ? 'http://localhost:8080' : 'https://portfolio-v2-api-48422797972.europe-north2.run.app'
