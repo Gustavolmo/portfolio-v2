@@ -593,7 +593,10 @@ function ThemeCustomization() {
               { label: 'System UI', value: 'system-ui' },
               { label: 'Sans serif', value: 'sans-serif' },
               { label: 'Serif', value: 'serif' },
-              { label: 'Cursive', value: 'cursive' },
+              {
+                label: 'Cursive',
+                value: '"Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive',
+              },
               { label: 'Fantasy', value: 'fantasy' },
             ]}
           />

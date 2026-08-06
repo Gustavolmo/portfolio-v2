@@ -249,6 +249,7 @@ export const themeRepository: Record<ThemeName, ThemeRepository> = {
     '--desktop-window-icon-border-left-color': '#050505',
 
     '--text-primary-color': '#050505',
-    '--text-primary-font-family': 'cursive',
+    '--text-primary-font-family':
+      '"Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive',
   },
 } as const
