@@ -589,15 +589,33 @@ function ThemeCustomization() {
             description="Choose from the font families available in every browser."
             value="monospace"
             options={[
-              { label: 'Monospace', value: 'monospace' },
-              { label: 'System UI', value: 'system-ui' },
-              { label: 'Sans serif', value: 'sans-serif' },
-              { label: 'Serif', value: 'serif' },
+              {
+                label: 'Monospace',
+                value:
+                  'ui-monospace, "SFMono-Regular", "Cascadia Code", "Roboto Mono", "Liberation Mono", "Courier New", monospace',
+              },
+              {
+                label: 'System UI',
+                value:
+                  'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+              },
+              {
+                label: 'Sans serif',
+                value: 'Arial, Helvetica, "Nimbus Sans", "Liberation Sans", sans-serif',
+              },
+              {
+                label: 'Serif',
+                value:
+                  'Georgia, "Times New Roman", Times, "Nimbus Roman No9 L", "Liberation Serif", serif',
+              },
               {
                 label: 'Cursive',
                 value: '"Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", cursive',
               },
-              { label: 'Fantasy', value: 'fantasy' },
+              {
+                label: 'Fantasy',
+                value: 'Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black", fantasy',
+              },
             ]}
           />
         </div>
